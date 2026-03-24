@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Helping Hands{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Helping Hands</h1>
+    <p>Connecting seniors with trusted help for everyday tasks.</p>
+
+    {% if user.is_authenticated %}
+        <p>Welcome back, {{ user.first_name }}! You are logged in.</p>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'register' %}">register</a> to get started.</p>
+    {% endif %}
+{% endblock %}
