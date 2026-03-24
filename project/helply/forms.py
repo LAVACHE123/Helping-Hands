@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+from .models import Job
 
 
 class RegisterForm(UserCreationForm):
@@ -31,3 +32,17 @@ class RegisterForm(UserCreationForm):
                 role=self.cleaned_data['role']
             )
         return user
+    
+
+    
+
+class JobForm(forms.ModelForm):
+    class Meta:
+        model = Job
+        fields = ['title', 'description', 'category', 'location', 'time_window', 'budget', 'budget_negotiable']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            if field.widget.__class__.__name__ != 'CheckboxInput':
+                field.widget.attrs['class'] = 'form-control'
