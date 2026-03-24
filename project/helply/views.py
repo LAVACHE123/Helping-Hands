@@ -6,6 +6,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .forms import RegisterForm
+from django.contrib.auth.decorators import login_required
+from .models import Job, Category
 
 
 def home_view(request):
@@ -48,10 +50,6 @@ def logout_view(request):
     logout(request)
     messages.info(request, 'You have been logged out.')
     return redirect('login')
-
-from django.contrib.auth.decorators import login_required
-from .models import Job, Category
-
 
 def job_list_view(request):
     jobs = Job.objects.filter(status='open')
