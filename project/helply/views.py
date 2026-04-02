@@ -5,9 +5,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
-from .forms import RegisterForm
+from .forms import RegisterForm, JobForm, MessageForm
 from django.contrib.auth.decorators import login_required
-from .models import Job, Category 
+from .models import Job, Category, Message 
 
 
 def home_view(request):
@@ -62,7 +62,6 @@ def job_list_view(request):
         'categories': categories,
         'selected_category': selected_category,
     })
-
 
 def job_detail_view(request, job_id):
     job = Job.objects.get(id=job_id)

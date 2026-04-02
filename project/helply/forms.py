@@ -31,9 +31,7 @@ class RegisterForm(UserCreationForm):
                 role=self.cleaned_data['role']
             )
         return user
-    
 
-    
 
 class JobForm(forms.ModelForm):
     class Meta:
@@ -45,6 +43,7 @@ class JobForm(forms.ModelForm):
         for field in self.fields.values():
             if field.widget.__class__.__name__ != 'CheckboxInput':
                 field.widget.attrs['class'] = 'form-control'
+
 
 class MessageForm(forms.ModelForm):
     class Meta:

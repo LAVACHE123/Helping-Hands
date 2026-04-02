@@ -1,5 +1,57 @@
-{% if user == job.requester or user == job.helper %}
-    <a href="{% url 'message_thread' job.id %}" class="btn btn-outline-primary mt-2">
-        💬 View Messages
-    </a>
-{% endif %}
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="fw-bold">{{ job.title }}</h2>
+                    <span class="badge bg-success fs-6">{{ job.status }}</span>
+                </div>
+                <p class="text-muted">{{ job.category }} · {{ job.location }}</p>
+                <hr>
+                <p>{{ job.description }}</p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Time window:</strong> {{ job.time_window }}</p>
+                        <p><strong>Posted by:</strong> {{ job.requester.first_name }} {{ job.requester.last_name }}</p>
+                        <p><strong>Posted on:</strong> {{ job.created_at|date:"M d, Y" }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        {% if job.budget %}
+                            <p><strong>Budget:</strong> ${{ job.budget }}</p>
+                        {% else %}
+                            <p><strong>Budget:</strong> To discuss</p>
+                        {% endif %}
+                        {% if job.helper %}
+                            <p><strong>Helper:</strong> {{ job.helper.first_name }} {{ job.helper.last_name }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr>
+                {% if user.is_authenticated %}
+                    {% if job.status == 'open' and job.requester != user %}
+                        <form method="post" action="{% url 'job_accept' job.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-success">Accept Job</button>
+                        </form>
+                    {% elif job.status == 'accepted' and job.requester == user %}
+                        <form method="post" action="{% url 'job_complete' job.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Mark as Completed</button>
+                        </form>
+                    {% endif %}
+                    {% if user == job.requester or user == job.helper %}
+                        <a href="{% url 'message_thread' job.id %}" class="btn btn-outline-primary mt-2">
+                            💬 View Messages
+                        </a>
+                    {% endif %}
+                {% endif %}
+                <a href="{% url 'job_list' %}" class="btn btn-outline-secondary mt-2">Back to Jobs</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
