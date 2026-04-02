@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h4 class="fw-bold mb-1">Messages for: {{ job.title }}</h4>
+        <p class="text-muted mb-4">
+            Between {{ job.requester.first_name }} and 
+            {% if job.helper %}{{ job.helper.first_name }}{% else %}(no helper yet){% endif %}
+        </p>
+
+        <div class="border rounded p-3 mb-4 bg-light" style="min-height: 300px;">
+            {% for msg in thread %}
+                <div class="mb-3 {% if msg.sender == user %}text-end{% endif %}">
+                    <span class="badge bg-{% if msg.sender == user %}primary{% else %}secondary{% endif %} mb-1">
+                        {{ msg.sender.first_name }}
+                    </span>
+                    <div class="d-inline-block p-2 rounded bg-{% if msg.sender == user %}primary text-white{% else %}white border{% endif %}">
+                        {{ msg.body }}
+                    </div>
+                    <div class="text-muted small">{{ msg.created_at|date:"M d, H:i" }}</div>
+                </div>
+            {% empty %}
+                <p class="text-muted text-center mt-5">No messages yet. Start the conversation!</p>
+            {% endfor %}
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.body }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+
+        <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-secondary mt-3">Back to Job</a>
+    </div>
+</div>
+{% endblock %}

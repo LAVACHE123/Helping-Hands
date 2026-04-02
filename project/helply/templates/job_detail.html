@@ -1,0 +1,5 @@
+{% if user == job.requester or user == job.helper %}
+    <a href="{% url 'message_thread' job.id %}" class="btn btn-outline-primary mt-2">
+        💬 View Messages
+    </a>
+{% endif %}

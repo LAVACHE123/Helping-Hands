@@ -13,4 +13,6 @@ urlpatterns = [
     path('jobs/create/', views.job_create_view, name='job_create'),
     path('jobs/<int:job_id>/accept/', views.job_accept_view, name='job_accept'),
     path('jobs/<int:job_id>/complete/', views.job_complete_view, name='job_complete'),
+    #messaging
+    path('jobs/<int:job_id>/messages/', views.message_thread_view, name='message_thread'),
 ]

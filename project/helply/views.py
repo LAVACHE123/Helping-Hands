@@ -7,7 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.decorators import login_required
-from .models import Job, Category
+from .models import Job, Category 
 
 
 def home_view(request):
@@ -104,3 +104,30 @@ def job_complete_view(request, job_id):
         job.save()
         messages.success(request, 'Job marked as completed!')
     return redirect('job_detail', job_id=job_id)
+
+@login_required
+def message_thread_view(request, job_id):
+    job = Job.objects.get(id=job_id)
+
+    # Only the requester or helper can see messages
+    if request.user != job.requester and request.user != job.helper:
+        messages.error(request, 'You do not have access to this conversation.')
+        return redirect('job_detail', job_id=job_id)
+
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            message.job = job
+            message.sender = request.user
+            message.save()
+            return redirect('message_thread', job_id=job_id)
+    else:
+        form = MessageForm()
+
+    thread = Message.objects.filter(job=job).order_by('created_at')
+    return render(request, 'messaging/thread.html', {
+        'job': job,
+        'thread': thread,
+        'form': form,
+    })

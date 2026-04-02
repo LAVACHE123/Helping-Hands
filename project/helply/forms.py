@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile
-from .models import Job
+from .models import Profile, Job, Message
 
 
 class RegisterForm(UserCreationForm):
@@ -46,3 +45,14 @@ class JobForm(forms.ModelForm):
         for field in self.fields.values():
             if field.widget.__class__.__name__ != 'CheckboxInput':
                 field.widget.attrs['class'] = 'form-control'
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ['body']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['body'].widget.attrs['class'] = 'form-control'
+        self.fields['body'].widget.attrs['placeholder'] = 'Write your message...'
+        self.fields['body'].label = 'Message'
