@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Job, Category, Message 
 
 
+
 def home_view(request):
     return render(request, 'home.html')
 
@@ -28,28 +29,28 @@ def register_view(request):
         form = RegisterForm()
     return render(request, 'accounts/register.html', {'form': form})
 
-
 def login_view(request):
     if request.user.is_authenticated:
         return redirect('home')
+    error = None
+    username = ''
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            user = form.get_user()
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
             login(request, user)
-            messages.success(request, f'Welcome back, {user.first_name}!')
-            return redirect('home')
+            return redirect(request.GET.get('next', 'home'))
         else:
-            messages.error(request, 'Invalid username or password.')
-    else:
-        form = AuthenticationForm()
-    return render(request, 'accounts/login.html', {'form': form})
-
+            error = 'Invalid username or password.'
+    return render(request, 'accounts/login.html', {
+        'error': error,
+        'username': username,
+    })
 
 def logout_view(request):
     logout(request)
-    messages.info(request, 'You have been logged out.')
-    return redirect('login')
+    return redirect("login")
 
 def job_list_view(request):
     jobs = Job.objects.filter(status='open')
