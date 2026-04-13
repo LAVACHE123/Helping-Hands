@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="fw-bold mb-2">Leave a Review</h2>
+        <p class="text-muted mb-4">
+            Reviewing <strong>{{ reviewee.first_name }} {{ reviewee.last_name }}</strong>
+            for job: <strong>{{ job.title }}</strong>
+        </p>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger small mt-1">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary w-100">Submit Review</button>
+        </form>
+        <p class="mt-3 text-center">
+            <a href="{% url 'job_detail' job.id %}">Back to Job</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

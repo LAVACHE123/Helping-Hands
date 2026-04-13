@@ -5,9 +5,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
-from .forms import RegisterForm, JobForm, MessageForm
+from .forms import RegisterForm, JobForm, MessageForm, ProfileForm, ReviewForm
 from django.contrib.auth.decorators import login_required
-from .models import Job, Category, Message 
+from .models import Job, Category, Message, Profile, Review
 
 
 
@@ -130,4 +130,52 @@ def message_thread_view(request, job_id):
         'job': job,
         'thread': thread,
         'form': form,
+    })
+
+@login_required
+def review_create_view(request, job_id):
+    job = get_object_or_404(Job, id=job_id)
+
+    # Only allow reviews on completed jobs
+    if job.status != 'completed':
+        messages.error(request, 'You can only review completed jobs.')
+        return redirect('job_detail', job_id=job_id)
+
+    # Only the requester or helper can leave a review
+    if request.user != job.requester and request.user != job.helper:
+        raise PermissionDenied
+
+    # Determine who is being reviewed
+    if request.user == job.requester:
+        reviewee = job.helper
+    else:
+        reviewee = job.requester
+
+    # Check if user has already reviewed this job
+    already_reviewed = Review.objects.filter(
+        job=job,
+        reviewer=request.user
+    ).exists()
+
+    if already_reviewed:
+        messages.error(request, 'You have already reviewed this job.')
+        return redirect('job_detail', job_id=job_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.job = job
+            review.reviewer = request.user
+            review.reviewee = reviewee
+            review.save()
+            messages.success(request, 'Your review has been submitted!')
+            return redirect('job_detail', job_id=job_id)
+    else:
+        form = ReviewForm()
+
+    return render(request, 'reviews/review_create.html', {
+        'form': form,
+        'job': job,
+        'reviewee': reviewee,
     })

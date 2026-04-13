@@ -55,3 +55,33 @@
     </div>
 </div>
 {% endblock %}
+
+{% if job.status == 'completed' %}
+    {% if user == job.requester or user == job.helper %}
+        <a href="{% url 'review_create' job.id %}" class="btn btn-warning mt-2">
+            ⭐ Leave a Review
+        </a>
+    {% endif %}
+{% endif %}
+
+{% if job.reviews.all %}
+    <hr>
+    <h5 class="fw-bold mt-3">Reviews</h5>
+    {% for review in job.reviews.all %}
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <strong>{{ review.reviewer.first_name }} → {{ review.reviewee.first_name }}</strong>
+                    <span class="text-warning">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= review.rating %}⭐{% endif %}
+                        {% endfor %}
+                    </span>
+                </div>
+                {% if review.comment %}
+                    <p class="mb-0 mt-1 text-muted">{{ review.comment }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

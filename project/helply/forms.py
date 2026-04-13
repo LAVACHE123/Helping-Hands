@@ -55,3 +55,16 @@ class MessageForm(forms.ModelForm):
         self.fields['body'].widget.attrs['class'] = 'form-control'
         self.fields['body'].widget.attrs['placeholder'] = 'Write your message...'
         self.fields['body'].label = 'Message'
+
+from .models import Profile, Job, Message, Review
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['rating'].widget.attrs['class'] = 'form-control'
+        self.fields['comment'].widget.attrs['class'] = 'form-control'
+        self.fields['comment'].widget.attrs['placeholder'] = 'Write your review...'
