@@ -3,12 +3,43 @@
 {% block title %}Home - Helping Hands{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Helping Hands</h1>
-    <p>Connecting seniors with trusted help for everyday tasks.</p>
 
+<div class="text-center py-5">
+    <h1 style="font-size: 3rem; color: #2c2825; font-weight: 500;">Helping Hands</h1>
+    <p style="color: #8c7b6b; font-size: 1.15rem; max-width: 500px; margin: 1rem auto 2rem;">
+        A simple way to find trusted help or offer your time to those who need it most.
+    </p>
     {% if user.is_authenticated %}
-        <p>Welcome back, {{ user.first_name }}! You are logged in.</p>
+        <p style="color: #8c7b6b; font-size: 1rem;">Welcome back, <strong style="color: #2c2825;">{{ user.first_name }}</strong>. What would you like to do today?</p>
+        <a href="{% url 'job_list' %}" class="btn btn-primary px-4 me-2">Browse Jobs</a>
+        <a href="{% url 'job_create' %}" class="btn btn-outline-primary px-4">Post a Job</a>
     {% else %}
-        <p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'register' %}">register</a> to get started.</p>
+        <a href="{% url 'register' %}" class="btn btn-primary px-4 me-2">Get Started</a>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary px-4">Log In</a>
     {% endif %}
+</div>
+
+<hr style="border-color: #e8e0d4; max-width: 600px; margin: 1rem auto 3rem;">
+
+<div class="row text-center mb-5" style="max-width: 800px; margin: 0 auto;">
+    <div class="col-md-4 mb-4">
+        <div style="background: #f5f0e8; border-radius: 16px; padding: 2rem 1.5rem;">
+            <h5 style="margin-bottom: 0.5rem; color: #3d5a80; font-weight: 500;">Find Help</h5>
+            <p style="color: #8c7b6b; font-size: 0.9rem; margin: 0;">Browse open jobs and offer your skills to people nearby.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div style="background: #f5f0e8; border-radius: 16px; padding: 2rem 1.5rem;">
+            <h5 style="margin-bottom: 0.5rem; color: #3d5a80; font-weight: 500;">Post a Job</h5>
+            <p style="color: #8c7b6b; font-size: 0.9rem; margin: 0;">Describe what you need and connect with someone who can help.</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div style="background: #f5f0e8; border-radius: 16px; padding: 2rem 1.5rem;">
+            <h5 style="margin-bottom: 0.5rem; color: #3d5a80; font-weight: 500;">Build Trust</h5>
+            <p style="color: #8c7b6b; font-size: 0.9rem; margin: 0;">Leave reviews after each job and grow a reliable community.</p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
