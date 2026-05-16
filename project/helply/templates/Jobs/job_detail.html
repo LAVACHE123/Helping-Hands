@@ -1,87 +1,175 @@
 {% extends 'base.html' %}
+{% block title %}{{ job.title }} — Helping Hands{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="fw-bold">{{ job.title }}</h2>
-                    <span class="badge bg-success fs-6">{{ job.status }}</span>
+<div class="page__mid">
+
+    <a href="{% url 'job_list' %}" style="font-size:.85rem;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:24px;">← Back to jobs</a>
+
+    <!-- Main card -->
+    <div class="card" style="margin-bottom:16px;">
+        <div class="card-body">
+
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;">
+                <h2 style="margin:0;font-size:1.5rem;">{{ job.title }}</h2>
+                <span class="badge
+                    {% if job.status == 'open' %}bg-success
+                    {% elif job.status == 'accepted' %}bg-primary
+                    {% elif job.status == 'completed' %}bg-secondary
+                    {% else %}bg-danger{% endif %}"
+                    style="flex-shrink:0;margin-top:4px;">
+                    {{ job.get_status_display }}
+                </span>
+            </div>
+
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:20px;">
+                {{ job.category }} &nbsp;·&nbsp; {{ job.location }} &nbsp;·&nbsp; {{ job.time_window }}
+            </p>
+
+            <p style="line-height:1.7;color:var(--ink-soft);">{{ job.description }}</p>
+
+            <div class="divider"></div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:.875rem;">
+                <div>
+                    <span style="color:var(--muted);">Posted by</span><br>
+                    <a href="{% url 'user_profile' job.requester.id %}" style="font-weight:500;">
+                        {{ job.requester.first_name }} {{ job.requester.last_name }}
+                    </a>
                 </div>
-                <p class="text-muted">{{ job.category }} · {{ job.location }}</p>
-                <hr>
-                <p>{{ job.description }}</p>
-                <hr>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><strong>Time window:</strong> {{ job.time_window }}</p>
-                        <p><strong>Posted by:</strong> {{ job.requester.first_name }} {{ job.requester.last_name }}</p>
-                        <p><strong>Posted on:</strong> {{ job.created_at|date:"M d, Y" }}</p>
-                    </div>
-                    <div class="col-md-6">
-                        {% if job.budget %}
-                            <p><strong>Budget:</strong> ${{ job.budget }}</p>
-                        {% else %}
-                            <p><strong>Budget:</strong> To discuss</p>
-                        {% endif %}
-                        {% if job.helper %}
-                            <p><strong>Helper:</strong> {{ job.helper.first_name }} {{ job.helper.last_name }}</p>
-                        {% endif %}
-                    </div>
+                <div>
+                    <span style="color:var(--muted);">Budget</span><br>
+                    <span style="font-weight:500;">
+                        {% if job.budget %}${{ job.budget }}{% if job.budget_negotiable %} <span style="font-weight:400;color:var(--muted);">(negotiable)</span>{% endif %}{% else %}To discuss{% endif %}
+                    </span>
                 </div>
-                <hr>
-                {% if user.is_authenticated %}
-                    {% if job.status == 'open' and job.requester != user %}
-                        <form method="post" action="{% url 'job_accept' job.id %}">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-success">Accept Job</button>
-                        </form>
-                    {% elif job.status == 'accepted' and job.requester == user %}
-                        <form method="post" action="{% url 'job_complete' job.id %}">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-primary">Mark as Completed</button>
-                        </form>
-                    {% endif %}
-                    {% if user == job.requester or user == job.helper %}
-                        <a href="{% url 'message_thread' job.id %}" class="btn btn-outline-primary mt-2">
-                            💬 View Messages
-                        </a>
+                <div>
+                    <span style="color:var(--muted);">Posted</span><br>
+                    <span style="font-weight:500;">{{ job.created_at|date:"M d, Y" }}</span>
+                </div>
+                {% if job.helper %}
+                <div>
+                    <span style="color:var(--muted);">Helper</span><br>
+                    <a href="{% url 'user_profile' job.helper.id %}" style="font-weight:500;">
+                        {{ job.helper.first_name }} {{ job.helper.last_name }}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+
+            {% if user.is_authenticated %}
+            <div class="divider"></div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+
+                {% if job.status == 'open' and job.requester != user %}
+                    {% if user_application %}
+                        <button class="btn btn-outline-secondary" disabled>Applied</button>
+                    {% else %}
+                        <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#applyModal">Apply for this job</button>
                     {% endif %}
                 {% endif %}
-                <a href="{% url 'job_list' %}" class="btn btn-outline-secondary mt-2">Back to Jobs</a>
+
+                {% if job.status == 'accepted' and job.requester == user %}
+                    <form method="post" action="{% url 'job_complete' job.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Mark as completed</button>
+                    </form>
+                {% endif %}
+
+                {% if job.status != 'open' %}
+                    {% if user == job.requester or user == job.helper %}
+                        <a href="{% url 'message_thread' job.id %}" class="btn btn-outline-primary">Messages</a>
+                    {% endif %}
+                {% endif %}
+
+                {% if job.status == 'completed' %}
+                    {% if user == job.requester or user == job.helper %}
+                        <a href="{% url 'review_create' job.id %}" class="btn btn-outline-primary">Leave a review</a>
+                    {% endif %}
+                {% endif %}
+
             </div>
+            {% endif %}
         </div>
     </div>
-</div>
-{% endblock %}
 
-{% if job.status == 'completed' %}
-    {% if user == job.requester or user == job.helper %}
-        <a href="{% url 'review_create' job.id %}" class="btn btn-warning mt-2">
-            ⭐ Leave a Review
-        </a>
+    <!-- Applicants (requester only, open job) -->
+    {% if user.is_authenticated and user == job.requester and job.status == 'open' %}
+    <div class="card" style="margin-bottom:16px;">
+        <div class="card-body">
+            <p class="section-label">Applicants ({{ job.applications.count }})</p>
+            {% for app in job.applications.all %}
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);">
+                <div>
+                    <a href="{% url 'user_profile' app.applicant.id %}" style="font-weight:600;font-size:.9rem;">
+                        {{ app.applicant.first_name }} {{ app.applicant.last_name }}
+                    </a>
+                    <span style="font-size:.8rem;color:var(--muted);margin-left:8px;">{{ app.created_at|date:"M d" }}</span>
+                    {% if app.message %}
+                        <p style="font-size:.875rem;color:var(--ink-soft);margin:6px 0 0;">{{ app.message }}</p>
+                    {% endif %}
+                </div>
+                <form method="post" action="{% url 'job_select_helper' job.id app.applicant.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success btn-sm">Select</button>
+                </form>
+            </div>
+            {% empty %}
+            <p style="color:var(--muted);font-size:.875rem;margin:0;">No applications yet.</p>
+            {% endfor %}
+        </div>
+    </div>
     {% endif %}
-{% endif %}
 
-{% if job.reviews.all %}
-    <hr>
-    <h5 class="fw-bold mt-3">Reviews</h5>
-    {% for review in job.reviews.all %}
-        <div class="card mb-2">
-            <div class="card-body">
-                <div class="d-flex justify-content-between">
-                    <strong>{{ review.reviewer.first_name }} → {{ review.reviewee.first_name }}</strong>
-                    <span class="text-warning">
-                        {% for i in "12345" %}
-                            {% if forloop.counter <= review.rating %}⭐{% endif %}
-                        {% endfor %}
+    <!-- Reviews -->
+    {% if job.reviews.all %}
+    <div class="card">
+        <div class="card-body">
+            <p class="section-label">Reviews</p>
+            {% for review in job.reviews.all %}
+            <div style="padding:12px 0;border-bottom:1px solid var(--border);">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                    <span style="font-weight:600;font-size:.875rem;">
+                        {{ review.reviewer.first_name }} → {{ review.reviewee.first_name }}
+                    </span>
+                    <span style="font-size:.85rem;color:var(--muted);">
+                        {% for i in "12345" %}{% if forloop.counter <= review.rating %}★{% else %}☆{% endif %}{% endfor %}
                     </span>
                 </div>
                 {% if review.comment %}
-                    <p class="mb-0 mt-1 text-muted">{{ review.comment }}</p>
+                    <p style="font-size:.875rem;color:var(--ink-soft);margin:0;">{{ review.comment }}</p>
                 {% endif %}
             </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- Apply modal -->
+{% if user.is_authenticated and job.status == 'open' and job.requester != user and not user_application %}
+<div class="modal fade" id="applyModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border:1px solid var(--border);border-radius:var(--r);box-shadow:0 8px 32px rgba(0,0,0,.1);">
+            <div class="modal-header" style="border-bottom:1px solid var(--border);padding:20px 24px;">
+                <h5 class="modal-title" style="font-size:1rem;">Apply for: {{ job.title }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" action="{% url 'job_apply' job.id %}">
+                {% csrf_token %}
+                <div class="modal-body" style="padding:20px 24px;">
+                    <label class="form-label">Message <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:.8rem;">(optional)</span></label>
+                    <textarea name="message" class="form-control" rows="4"
+                        placeholder="Introduce yourself and explain why you'd be a good fit..."></textarea>
+                </div>
+                <div class="modal-footer" style="border-top:1px solid var(--border);padding:16px 24px;gap:8px;">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-accent">Submit application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endif %}
+{% endblock %}
