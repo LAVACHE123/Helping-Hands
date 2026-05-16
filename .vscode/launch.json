@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Django Server",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": ["runserver", "8001"],
+            "django": true,
+            "cwd": "${workspaceFolder}/project",
+            "python": "${workspaceFolder}/project/.venv/bin/python"
+        }
+    ]
+}
