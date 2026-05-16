@@ -89,6 +89,20 @@ class Review(models.Model):
         return f"Review #{self.id}"
 
 
+class JobApplication(models.Model):
+    job = models.ForeignKey("Job", on_delete=models.CASCADE, related_name="applications")
+    applicant = models.ForeignKey(User, on_delete=models.CASCADE, related_name="applications")
+    message = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        unique_together = [("job", "applicant")]
+
+    def __str__(self):
+        return f"Application #{self.id} by {self.applicant.username}"
+
+
 class Report(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     reporter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="reports_made")
