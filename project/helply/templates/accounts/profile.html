@@ -1,83 +1,103 @@
 {% extends 'base.html' %}
+{% block title %}My Profile — Helping Hands{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
+<div class="page__mid">
 
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="fw-bold mb-0">
-                        {{ request.user.first_name }} {{ request.user.last_name }}
-                    </h2>
-                    <a href="{% url 'profile_edit' %}" class="btn btn-outline-primary btn-sm">Edit Profile</a>
-                </div>
-                <p class="text-muted mb-1"><strong>Role:</strong> {{ profile.get_role_display }}</p>
-                <p class="text-muted mb-1"><strong>Location:</strong> {{ profile.location|default:"Not set" }}</p>
-                <p class="text-muted mb-1"><strong>Email:</strong> {{ request.user.email|default:"Not set" }}</p>
-                {% if profile.bio %}
-                    <p class="mt-2">{{ profile.bio }}</p>
+    <!-- Profile header -->
+    <div class="card" style="margin-bottom:16px;">
+        <div class="card-body">
+            <div style="display:flex;align-items:center;gap:24px;">
+                {% if profile.avatar %}
+                    <img src="{{ profile.avatar.url }}"
+                         style="width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--border);flex-shrink:0;">
+                {% else %}
+                    <div style="width:88px;height:88px;border-radius:50%;background:var(--ink);color:#fff;
+                                display:flex;align-items:center;justify-content:center;
+                                font-size:1.6rem;font-weight:700;flex-shrink:0;letter-spacing:-.02em;">
+                        {{ request.user.first_name|first }}{{ request.user.last_name|first }}
+                    </div>
                 {% endif %}
+                <div style="flex:1;">
+                    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+                        <div>
+                            <h3 style="margin-bottom:4px;">{{ request.user.first_name }} {{ request.user.last_name }}</h3>
+                            <span class="badge {% if profile.role == 'requester' %}bg-warning{% else %}bg-success{% endif %}" style="margin-bottom:8px;">
+                                {{ profile.get_role_display }}
+                            </span>
+                            {% if profile.location %}
+                                <p style="font-size:.85rem;color:var(--muted);margin:4px 0 0;">{{ profile.location }}</p>
+                            {% endif %}
+                            <p style="font-size:.85rem;color:var(--muted);margin:2px 0 0;">{{ request.user.email }}</p>
+                        </div>
+                        <a href="{% url 'profile_edit' %}" class="btn btn-outline-primary btn-sm" style="flex-shrink:0;">Edit profile</a>
+                    </div>
+                </div>
+            </div>
+            {% if profile.bio %}
+                <div class="divider"></div>
+                <p style="font-size:.9rem;color:var(--ink-soft);margin:0;">{{ profile.bio }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Jobs section -->
+    <p class="section-label" style="margin-top:32px;">
+        {% if profile.role == 'requester' %}Jobs Posted{% else %}Jobs Worked{% endif %}
+    </p>
+    {% if profile.role == 'requester' %}
+        {% for job in jobs_posted %}
+        <div class="card" style="margin-bottom:8px;">
+            <div style="padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                    <span style="font-weight:500;font-size:.9rem;">{{ job.title }}</span>
+                    <span style="font-size:.8rem;color:var(--muted);margin-left:10px;">{{ job.created_at|date:"M d, Y" }}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <span class="badge bg-secondary">{{ job.status }}</span>
+                    <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-primary btn-sm">View</a>
+                </div>
             </div>
         </div>
-
-        <h4 class="fw-bold mb-3">Jobs I Posted</h4>
-        {% for job in jobs_posted %}
-            <div class="card mb-2 shadow-sm">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="mb-0">{{ job.title }}</h6>
-                        <small class="text-muted">{{ job.created_at|date:"M d, Y" }}</small>
-                    </div>
-                    <div>
-                        <span class="badge bg-secondary me-2">{{ job.status }}</span>
-                        <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-primary btn-sm">View</a>
-                    </div>
-                </div>
-            </div>
         {% empty %}
-            <p class="text-muted">You haven't posted any jobs yet.</p>
+        <p style="color:var(--muted);font-size:.875rem;">No jobs posted yet.</p>
         {% endfor %}
-
-        <h4 class="fw-bold mb-3 mt-4">Jobs I Accepted</h4>
+    {% else %}
         {% for job in jobs_accepted %}
-            <div class="card mb-2 shadow-sm">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="mb-0">{{ job.title }}</h6>
-                        <small class="text-muted">{{ job.created_at|date:"M d, Y" }}</small>
-                    </div>
-                    <div>
-                        <span class="badge bg-secondary me-2">{{ job.status }}</span>
-                        <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-primary btn-sm">View</a>
-                    </div>
+        <div class="card" style="margin-bottom:8px;">
+            <div style="padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                    <span style="font-weight:500;font-size:.9rem;">{{ job.title }}</span>
+                    <span style="font-size:.8rem;color:var(--muted);margin-left:10px;">{{ job.created_at|date:"M d, Y" }}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <span class="badge bg-secondary">{{ job.status }}</span>
+                    <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-primary btn-sm">View</a>
                 </div>
             </div>
+        </div>
         {% empty %}
-            <p class="text-muted">You haven't accepted any jobs yet.</p>
+        <p style="color:var(--muted);font-size:.875rem;">No jobs yet.</p>
         {% endfor %}
+    {% endif %}
 
-        <h4 class="fw-bold mb-3 mt-4">Reviews Received</h4>
-        {% for review in profile.user.reviews_received.all %}
-            <div class="card mb-2 shadow-sm">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <strong>{{ review.reviewer.first_name }} {{ review.reviewer.last_name }}</strong>
-                        <span class="text-warning">
-                            {% for i in "12345" %}
-                                {% if forloop.counter <= review.rating %}⭐{% endif %}
-                            {% endfor %}
-                        </span>
-                    </div>
-                    {% if review.comment %}
-                        <p class="mb-0 mt-1 text-muted">{{ review.comment }}</p>
-                    {% endif %}
-                </div>
+    <!-- Reviews -->
+    <p class="section-label" style="margin-top:32px;">Reviews received</p>
+    {% for review in profile.user.reviews_received.all %}
+    <div class="card" style="margin-bottom:8px;">
+        <div style="padding:14px 20px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                <span style="font-weight:500;font-size:.875rem;">{{ review.reviewer.first_name }} {{ review.reviewer.last_name }}</span>
+                <span style="font-size:.85rem;color:var(--muted);">{% for i in "12345" %}{% if forloop.counter <= review.rating %}★{% else %}☆{% endif %}{% endfor %}</span>
             </div>
-        {% empty %}
-            <p class="text-muted">No reviews yet.</p>
-        {% endfor %}
-
+            {% if review.comment %}
+                <p style="font-size:.85rem;color:var(--ink-soft);margin:0;">{{ review.comment }}</p>
+            {% endif %}
+        </div>
     </div>
+    {% empty %}
+    <p style="color:var(--muted);font-size:.875rem;">No reviews yet.</p>
+    {% endfor %}
+
 </div>
 {% endblock %}

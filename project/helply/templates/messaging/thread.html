@@ -1,39 +1,60 @@
 {% extends 'base.html' %}
+{% block title %}Messages — {{ job.title }}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <h4 class="fw-bold mb-1">Messages for: {{ job.title }}</h4>
-        <p class="text-muted mb-4">
-            Between {{ job.requester.first_name }} and 
-            {% if job.helper %}{{ job.helper.first_name }}{% else %}(no helper yet){% endif %}
-        </p>
+<div class="page__mid">
 
-        <div class="border rounded p-3 mb-4 bg-light" style="min-height: 300px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+        <a href="{% url 'job_detail' job.id %}" style="font-size:.85rem;color:var(--muted);text-decoration:none;">← Back</a>
+        <div>
+            <h5 style="margin:0;font-size:.95rem;">{{ job.title }}</h5>
+            <span style="font-size:.8rem;color:var(--muted);">
+                {{ job.requester.first_name }}{% if job.helper %} &amp; {{ job.helper.first_name }}{% endif %}
+            </span>
+        </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="card" style="margin-bottom:12px;">
+        <div style="padding:20px;min-height:360px;max-height:520px;overflow-y:auto;" id="msgbox">
             {% for msg in thread %}
-                <div class="mb-3 {% if msg.sender == user %}text-end{% endif %}">
-                    <span class="badge bg-{% if msg.sender == user %}primary{% else %}secondary{% endif %} mb-1">
-                        {{ msg.sender.first_name }}
-                    </span>
-                    <div class="d-inline-block p-2 rounded bg-{% if msg.sender == user %}primary text-white{% else %}white border{% endif %}">
+            <div style="display:flex;{% if msg.sender == user %}justify-content:flex-end{% else %}justify-content:flex-start{% endif %};margin-bottom:14px;">
+                <div style="max-width:68%;">
+                    <div style="font-size:.75rem;color:var(--muted);margin-bottom:3px;{% if msg.sender == user %}text-align:right{% endif %}">
+                        {{ msg.sender.first_name }} · {{ msg.created_at|date:"M d, H:i" }}
+                    </div>
+                    <div style="padding:10px 14px;border-radius:8px;font-size:.875rem;line-height:1.5;
+                        {% if msg.sender == user %}
+                            background:var(--ink);color:#fff;border-bottom-right-radius:2px;
+                        {% else %}
+                            background:var(--bg);border:1px solid var(--border);color:var(--ink);border-bottom-left-radius:2px;
+                        {% endif %}">
                         {{ msg.body }}
                     </div>
-                    <div class="text-muted small">{{ msg.created_at|date:"M d, H:i" }}</div>
                 </div>
+            </div>
             {% empty %}
-                <p class="text-muted text-center mt-5">No messages yet. Start the conversation!</p>
+            <div style="text-align:center;padding:60px 0;color:var(--muted);">
+                <p style="font-size:.9rem;margin:0;">No messages yet — start the conversation.</p>
+            </div>
             {% endfor %}
         </div>
-
-        <form method="post">
-            {% csrf_token %}
-            <div class="mb-3">
-                {{ form.body }}
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
-
-        <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-secondary mt-3">Back to Job</a>
     </div>
+
+    <!-- Input -->
+    <div class="card">
+        <div style="padding:14px 16px;">
+            <form method="post" style="display:flex;gap:10px;align-items:flex-end;">
+                {% csrf_token %}
+                <div style="flex:1;">{{ form.body }}</div>
+                <button type="submit" class="btn btn-primary" style="flex-shrink:0;">Send</button>
+            </form>
+        </div>
+    </div>
+
 </div>
+<script>
+    const b = document.getElementById('msgbox');
+    if (b) b.scrollTop = b.scrollHeight;
+</script>
 {% endblock %}

@@ -13,4 +13,8 @@ class HelplyConfig(AppConfig):
             if created:
                 Profile.objects.get_or_create(user=instance, defaults={'role': 'helper'})
 
+<<<<<<< Updated upstream
         post_save.connect(create_profile, sender=User)
+=======
+        post_save.connect(create_profile, sender=User)
+>>>>>>> Stashed changes

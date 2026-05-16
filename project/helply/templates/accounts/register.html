@@ -1,15 +1,114 @@
 {% extends 'base.html' %}
-
-{% block title %}Register - Helping Hands{% endblock %}
+{% block title %}Register — Helping Hands{% endblock %}
 
 {% block content %}
-    <h1>Create an Account</h1>
+<div class="page__narrow" style="padding-top:60px;">
+    <div class="card">
+        <div class="card-body">
+            <h2 style="margin-bottom:4px;">Create account</h2>
+            <p style="color:var(--muted);font-size:.9rem;margin-bottom:28px;">Join Helping Hands.</p>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
+            <form method="post" novalidate>
+                {% csrf_token %}
 
-    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+                <!-- Role picker -->
+                <div style="margin-bottom:24px;">
+                    <label class="form-label">I am a...</label>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;">
+
+                        <div class="role-card" id="card-requester" onclick="pickRole('requester')">
+                            <input type="radio" name="role" id="role_requester" value="requester" class="d-none">
+                            <label for="role_requester" style="cursor:pointer;display:block;">
+                                <div style="font-weight:600;margin-bottom:2px;">Job Poster</div>
+                                <div style="font-size:.8rem;color:var(--muted);">I need help with tasks</div>
+                            </label>
+                        </div>
+
+                        <div class="role-card" id="card-helper" onclick="pickRole('helper')">
+                            <input type="radio" name="role" id="role_helper" value="helper" class="d-none">
+                            <label for="role_helper" style="cursor:pointer;display:block;">
+                                <div style="font-weight:600;margin-bottom:2px;">Job Seeker</div>
+                                <div style="font-size:.8rem;color:var(--muted);">I want to earn money helping</div>
+                            </label>
+                        </div>
+
+                    </div>
+                    {% if form.role.errors %}
+                        <p style="color:#b91c1c;font-size:.8rem;margin-top:6px;">{{ form.role.errors|join:", " }}</p>
+                    {% endif %}
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+                    <div>
+                        <label class="form-label">First name</label>
+                        {{ form.first_name }}
+                        {% if form.first_name.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.first_name.errors|join:", " }}</p>{% endif %}
+                    </div>
+                    <div>
+                        <label class="form-label">Last name</label>
+                        {{ form.last_name }}
+                        {% if form.last_name.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.last_name.errors|join:", " }}</p>{% endif %}
+                    </div>
+                </div>
+
+                <div style="margin-bottom:16px;">
+                    <label class="form-label">Email</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.email.errors|join:", " }}</p>{% endif %}
+                </div>
+
+                <div style="margin-bottom:16px;">
+                    <label class="form-label">Username</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.username.errors|join:", " }}</p>{% endif %}
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;">
+                    <div>
+                        <label class="form-label">Password</label>
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.password1.errors|join:", " }}</p>{% endif %}
+                    </div>
+                    <div>
+                        <label class="form-label">Confirm</label>
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}<p style="color:#b91c1c;font-size:.8rem;margin-top:4px;">{{ form.password2.errors|join:", " }}</p>{% endif %}
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Create account</button>
+            </form>
+
+            <div style="text-align:center;margin-top:20px;">
+                <span style="color:var(--muted);font-size:.85rem;">
+                    Already have an account? <a href="{% url 'login' %}">Log in</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .role-card {
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        padding: 14px 16px;
+        cursor: pointer;
+        transition: border-color .12s, background .12s;
+        background: var(--surface);
+    }
+    .role-card:hover { border-color: var(--border-dark); }
+    .role-card.selected {
+        border-color: var(--ink);
+        background: var(--bg);
+    }
+</style>
+
+<script>
+function pickRole(role) {
+    document.getElementById('role_' + role).checked = true;
+    document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
+    document.getElementById('card-' + role).classList.add('selected');
+}
+</script>
 {% endblock %}

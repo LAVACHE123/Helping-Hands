@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Completed Jobs — Helping Hands{% endblock %}
+
+{% block content %}
+<div class="page__mid">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;">
+        <h2 style="margin:0;">Completed Jobs</h2>
+        <a href="{% url 'dashboard' %}" style="font-size:.85rem;color:var(--muted);">← My Jobs</a>
+    </div>
+
+    {% for job in completed_jobs %}
+    <div class="card" style="margin-bottom:8px;">
+        <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;">
+            <div>
+                <span style="font-weight:500;font-size:.9rem;">{{ job.title }}</span>
+                <span style="font-size:.8rem;color:var(--muted);margin-left:8px;">{{ job.created_at|date:"M d, Y" }}</span>
+                {% if profile.role == 'requester' and job.helper %}
+                    <p style="font-size:.82rem;color:var(--muted);margin:4px 0 0;">
+                        Helped by <a href="{% url 'user_profile' job.helper.id %}" style="color:var(--ink);">{{ job.helper.first_name }} {{ job.helper.last_name }}</a>
+                    </p>
+                {% elif profile.role == 'helper' %}
+                    <p style="font-size:.82rem;color:var(--muted);margin:4px 0 0;">
+                        Posted by <a href="{% url 'user_profile' job.requester.id %}" style="color:var(--ink);">{{ job.requester.first_name }} {{ job.requester.last_name }}</a>
+                    </p>
+                {% endif %}
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+                <span class="badge bg-secondary">Completed</span>
+                <a href="{% url 'job_detail' job.id %}" class="btn btn-outline-primary btn-sm">View</a>
+                <a href="{% url 'review_create' job.id %}" class="btn btn-outline-primary btn-sm">Leave review</a>
+                <a href="{% url 'report_create' job.id %}" class="btn btn-sm" style="background:transparent;border:1px solid #fca5a5;color:#b91c1c;">Report</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div style="text-align:center;padding:64px 0;color:var(--muted);border:1px solid var(--border);border-radius:var(--r);">
+        <p style="font-size:.9rem;margin:0;">No completed jobs yet.</p>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
