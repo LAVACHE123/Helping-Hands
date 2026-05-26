@@ -10,7 +10,7 @@ class HelplyConfig(AppConfig):
         from .models import Profile
 
         def create_profile(sender, instance, created, **kwargs):
-            if created:
+            if created and not kwargs.get('raw', False):
                 Profile.objects.get_or_create(user=instance, defaults={'role': 'helper'})
 
         post_save.connect(create_profile, sender=User)
