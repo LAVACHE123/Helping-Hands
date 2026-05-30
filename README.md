@@ -49,12 +49,8 @@ password123
 | Helper | `magnus_a` | Helper account |
 | Helper | `soupy` | Helper account |
 
-## Submission files
+## Repository files
 
-- Final report: `submission/Helping_Hands_Final_Report.docx`
-- PDF version: `submission/Helping_Hands_Final_Report.pdf`
 - Data dump: `project/data.json`
 - Fixture copy: `project/fixtures/data.json`
 - Python dependencies: `project/requirements.txt`
-
-Before submitting, replace any placeholder GitHub/video/team details in the report with the final links and names.
