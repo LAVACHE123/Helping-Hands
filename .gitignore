@@ -2,6 +2,11 @@
 __pycache__/
 *.py[codz]
 *$py.class
+.DS_Store
+.vscode/
+submission/rendered_report/
+submission/pdf_pages/
+submission/pdf_preview/
 
 # C extensions
 *.so

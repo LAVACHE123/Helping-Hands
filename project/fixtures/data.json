@@ -1,2295 +1,1165 @@
 [
 {
-    "model": "admin.logentry",
-    "pk": 1,
-    "fields": {
-        "action_time": "2026-03-24T16:44:37.290Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "1",
-        "object_repr": "expenses",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-        "action_time": "2026-05-09T14:38:19.434Z",
-        "user": 1,
-        "content_type": 4,
-        "object_id": "3",
-        "object_repr": "Marc82",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-        "action_time": "2026-05-09T14:39:17.967Z",
-        "user": 1,
-        "content_type": 4,
-        "object_id": "3",
-        "object_repr": "Marc82",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-        "action_time": "2026-05-09T14:42:51.892Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "2",
-        "object_repr": "gardening",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-        "action_time": "2026-05-09T14:42:57.478Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Mowing the lawn #2",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-        "action_time": "2026-05-09T14:43:20.742Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Mowing the lawn #2",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Budget\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-        "action_time": "2026-05-09T14:43:26.688Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Mowing the lawn #2",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-        "action_time": "2026-05-09T14:44:23.715Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "3",
-        "object_repr": "shopping",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-        "action_time": "2026-05-09T14:44:43.112Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "4",
-        "object_repr": "house cleaning",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 10,
-    "fields": {
-        "action_time": "2026-05-09T14:45:11.523Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "1",
-        "object_repr": "Grounds keeper #1",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 11,
-    "fields": {
-        "action_time": "2026-05-09T14:54:07.033Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "1",
-        "object_repr": "Around the House",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-        "action_time": "2026-05-09T14:54:45.139Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "2",
-        "object_repr": "Garden & Outdoor",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-        "action_time": "2026-05-09T14:55:04.640Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "4",
-        "object_repr": "Tech & Digital Help",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-        "action_time": "2026-05-09T14:55:38.301Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "3",
-        "object_repr": "Errands & Transportation",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2026-05-09T14:55:55.943Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "5",
-        "object_repr": "Cleaning & Tidying",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2026-05-09T14:56:15.284Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "6",
-        "object_repr": "Pet & Animal Care",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2026-05-09T14:56:26.506Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "7",
-        "object_repr": "Home Repairs & Maintenance",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2026-05-09T14:56:44.197Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "8",
-        "object_repr": "Administrative & Personal",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2026-05-09T15:09:48.550Z",
-        "user": 1,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "helper",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2026-05-09T15:11:46.910Z",
-        "user": 1,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "helper",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-        "action_time": "2026-05-09T15:12:30.043Z",
-        "user": 1,
-        "content_type": 4,
-        "object_id": "1",
-        "object_repr": "louie",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-        "action_time": "2026-05-09T15:14:23.145Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "3",
-        "object_repr": "abc #3",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2026-05-09T15:16:59.289Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Mowing the lawn #2",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2026-05-09T16:28:15.462Z",
-        "user": 1,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "helper",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-        "action_time": "2026-05-09T16:28:35.195Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "5",
-        "object_repr": "Marc82 (requester)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-        "action_time": "2026-05-09T16:47:37.939Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "2",
-        "object_repr": "John.adam (requester)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-        "action_time": "2026-05-09T16:49:11.253Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "3",
-        "object_repr": "carl.edlund (helper)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-        "action_time": "2026-05-09T16:49:56.647Z",
-        "user": 1,
-        "content_type": 4,
-        "object_id": "6",
-        "object_repr": "Jannette",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-        "action_time": "2026-05-09T16:50:30.610Z",
-        "user": 1,
-        "content_type": 4,
-        "object_id": "6",
-        "object_repr": "Jannette",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-        "action_time": "2026-05-09T16:53:17.164Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "6",
-        "object_repr": "Jannette (requester)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Location\", \"Avatar\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-        "action_time": "2026-05-09T16:54:29.276Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "3",
-        "object_repr": "carl.edlund (helper)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-        "action_time": "2026-05-09T16:54:37.411Z",
-        "user": 1,
-        "content_type": 11,
-        "object_id": "4",
-        "object_repr": "louie (helper)",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-        "action_time": "2026-05-09T17:00:08.178Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "4",
-        "object_repr": "help with expense report #4",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\", \"Location\", \"Time window\", \"Budget\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-        "action_time": "2026-05-09T17:01:38.884Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "6",
-        "object_repr": "Hanging up paintings #6",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-        "action_time": "2026-05-09T17:46:08.261Z",
-        "user": 7,
-        "content_type": 4,
-        "object_id": "4",
-        "object_repr": "John.adam",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-        "action_time": "2026-05-10T08:24:46.414Z",
-        "user": 7,
-        "content_type": 4,
-        "object_id": "1",
-        "object_repr": "louie",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-        "action_time": "2026-05-10T08:33:00.273Z",
-        "user": 7,
-        "content_type": 8,
-        "object_id": "4",
-        "object_repr": "help with expense report #4",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": 1,
-        "codename": "add_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": 1,
-        "codename": "change_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": 1,
-        "codename": "delete_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": 1,
-        "codename": "view_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-        "name": "Can add permission",
-        "content_type": 2,
-        "codename": "add_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-        "name": "Can change permission",
-        "content_type": 2,
-        "codename": "change_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": 2,
-        "codename": "delete_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-        "name": "Can view permission",
-        "content_type": 2,
-        "codename": "view_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-        "name": "Can add group",
-        "content_type": 3,
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-        "name": "Can change group",
-        "content_type": 3,
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-        "name": "Can delete group",
-        "content_type": 3,
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-        "name": "Can view group",
-        "content_type": 3,
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-        "name": "Can add user",
-        "content_type": 4,
-        "codename": "add_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-        "name": "Can change user",
-        "content_type": 4,
-        "codename": "change_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-        "name": "Can delete user",
-        "content_type": 4,
-        "codename": "delete_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-        "name": "Can view user",
-        "content_type": 4,
-        "codename": "view_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-        "name": "Can add content type",
-        "content_type": 5,
-        "codename": "add_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-        "name": "Can change content type",
-        "content_type": 5,
-        "codename": "change_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": 5,
-        "codename": "delete_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-        "name": "Can view content type",
-        "content_type": 5,
-        "codename": "view_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-        "name": "Can add session",
-        "content_type": 6,
-        "codename": "add_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-        "name": "Can change session",
-        "content_type": 6,
-        "codename": "change_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-        "name": "Can delete session",
-        "content_type": 6,
-        "codename": "delete_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-        "name": "Can view session",
-        "content_type": 6,
-        "codename": "view_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-        "name": "Can add category",
-        "content_type": 7,
-        "codename": "add_category"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-        "name": "Can change category",
-        "content_type": 7,
-        "codename": "change_category"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-        "name": "Can delete category",
-        "content_type": 7,
-        "codename": "delete_category"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-        "name": "Can view category",
-        "content_type": 7,
-        "codename": "view_category"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-        "name": "Can add job",
-        "content_type": 8,
-        "codename": "add_job"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-        "name": "Can change job",
-        "content_type": 8,
-        "codename": "change_job"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-        "name": "Can delete job",
-        "content_type": 8,
-        "codename": "delete_job"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-        "name": "Can view job",
-        "content_type": 8,
-        "codename": "view_job"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-        "name": "Can add review",
-        "content_type": 9,
-        "codename": "add_review"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-        "name": "Can change review",
-        "content_type": 9,
-        "codename": "change_review"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-        "name": "Can delete review",
-        "content_type": 9,
-        "codename": "delete_review"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-        "name": "Can view review",
-        "content_type": 9,
-        "codename": "view_review"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-        "name": "Can add report",
-        "content_type": 10,
-        "codename": "add_report"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-        "name": "Can change report",
-        "content_type": 10,
-        "codename": "change_report"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-        "name": "Can delete report",
-        "content_type": 10,
-        "codename": "delete_report"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-        "name": "Can view report",
-        "content_type": 10,
-        "codename": "view_report"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-        "name": "Can add profile",
-        "content_type": 11,
-        "codename": "add_profile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-        "name": "Can change profile",
-        "content_type": 11,
-        "codename": "change_profile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-        "name": "Can delete profile",
-        "content_type": 11,
-        "codename": "delete_profile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-        "name": "Can view profile",
-        "content_type": 11,
-        "codename": "view_profile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-        "name": "Can add message",
-        "content_type": 12,
-        "codename": "add_message"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-        "name": "Can change message",
-        "content_type": 12,
-        "codename": "change_message"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-        "name": "Can delete message",
-        "content_type": 12,
-        "codename": "delete_message"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
-        "name": "Can view message",
-        "content_type": 12,
-        "codename": "view_message"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 49,
-    "fields": {
-        "name": "Can add job application",
-        "content_type": 13,
-        "codename": "add_jobapplication"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 50,
-    "fields": {
-        "name": "Can change job application",
-        "content_type": 13,
-        "codename": "change_jobapplication"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 51,
-    "fields": {
-        "name": "Can delete job application",
-        "content_type": 13,
-        "codename": "delete_jobapplication"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 52,
-    "fields": {
-        "name": "Can view job application",
-        "content_type": 13,
-        "codename": "view_jobapplication"
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$8BIYxDfj7kQCStQk1vihL7$UDH01VnBkoTPC0ET3WUKUKrBYbRuas9nYhRA9cF0jSw=",
-        "last_login": "2026-05-09T16:56:52.660Z",
-        "is_superuser": true,
-        "username": "louie",
-        "first_name": "Louie",
-        "last_name": "Piakar",
-        "email": "louie.piakar@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2026-03-24T16:33:45Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$t0SMSE50IV93X8VzleE2uK$HkV8gFgJ//AxTi0/Yo/D6aIpucQJykcIuU28UCQoB0Y=",
-        "last_login": "2026-04-13T13:52:49.333Z",
-        "is_superuser": false,
-        "username": "soupy",
-        "first_name": "Patrik",
-        "last_name": "Hansen",
-        "email": "patrikhansen@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-04-13T13:52:49.025Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$s8FwkKLjV3npA1or37VY3l$mi458Kg+8TZu0KvoFQieK8SvZQGTOaGi9FOI1LnFeW0=",
-        "last_login": "2026-05-09T16:41:43.015Z",
-        "is_superuser": false,
-        "username": "Marc82",
-        "first_name": "Marc",
-        "last_name": "Jensen",
-        "email": "marc.jensen@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-09T14:38:19Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 4,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$ACxjbAmmlqeipAUcohfdBP$E9YmhWg9r0zvdqso8h/9WVpAG6jdZxnzIh73zn4/2Cg=",
-        "last_login": "2026-05-11T10:23:24.870Z",
-        "is_superuser": false,
-        "username": "John.adam",
-        "first_name": "John",
-        "last_name": "Adam",
-        "email": "john.adam@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-09T15:48:17Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 5,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$RU91mMcTerHBU9Cs9geUFP$52NoTlF4VGQ9Fh2tSuH7y5qT5PoiqYHSTj3POfLYyPM=",
-        "last_login": "2026-05-16T11:05:50.479Z",
-        "is_superuser": false,
-        "username": "carl.edlund",
-        "first_name": "Carl",
-        "last_name": "Edlund",
-        "email": "carl.edlund@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-09T16:09:17.967Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 6,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$UPWh2Nam5DWoUyegDTfQ6h$He5GtMUzN0gxF7qI8ulWfMwQjPQb7mDMUhGRYEHCcWE=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "Jannette",
-        "first_name": "Jannette",
-        "last_name": "Smith",
-        "email": "jannette.smith@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-09T16:49:56Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 7,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$wkfLhRYkulzTlLjvsVy1jZ$IVdvpBFDDNMmE3oIy2vKiGg3IZ3p6MwQHvIgISBA8Vg=",
-        "last_login": "2026-05-26T10:56:29.448Z",
-        "is_superuser": true,
-        "username": "louieT",
-        "first_name": "",
-        "last_name": "",
-        "email": "louie.toulemonde@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2026-05-09T17:40:33.682Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 24,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$ccRQ3FQilehp42rMPfwgm6$Ok2NRi1jDkeOE35ltsTzRzr9Cjz5HLyte9IHLkshdL0=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "magnus_a",
-        "first_name": "Magnus",
-        "last_name": "Andersen",
-        "email": "magnus.andersen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:03.257Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 25,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$AuRpmn28YZKQAqILP3z6Wi$kCbY+l7c4lHCxVzyX9f8oIjFRHP6y1lLeLA64RgnmJQ=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "ingrid_h",
-        "first_name": "Ingrid",
-        "last_name": "Hansen",
-        "email": "ingrid.hansen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:03.533Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 26,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$76eyOQpueKs7Ygyp86PXKE$+aIt8V3wfm/0SlvjEGJbJiZo4o4E7VQdLl9/uWqtxO0=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "erik_j",
-        "first_name": "Erik",
-        "last_name": "Johansen",
-        "email": "erik.johansen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:03.811Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 27,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$4tG4wpwaORFOfEeqNOdQ6V$Mm84ASei4vqoh92Gawp3CImU5NOaGzY64JhZQ8ppH/c=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "astrid_l",
-        "first_name": "Astrid",
-        "last_name": "Larsen",
-        "email": "astrid.larsen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:04.086Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 28,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$fsQ1aXE2mi7Zp7xUvgONnW$b7LrAeyhIBpd66rCBRk/dTchg1mxJvY50ZOEB4UMZNI=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "jonas_b",
-        "first_name": "Jonas",
-        "last_name": "Berg",
-        "email": "jonas.berg@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:04.360Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 29,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$Er3MLm3Jbve11vQcZFCPNx$DBG+6PJSuGzVofdzbYVM2HLxnctaQziYEF9KGZ8NEy0=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "maja_k",
-        "first_name": "Maja",
-        "last_name": "Kristiansen",
-        "email": "maja.kristiansen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:04.637Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 30,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$8WlcLRRDOGVFQN11MjFXqz$Z0RBtgfYJOIIgcbUvA/djlAh3vbmoPEh2vyRUVuyRXw=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "tobias_h",
-        "first_name": "Tobias",
-        "last_name": "Holm",
-        "email": "tobias.holm@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:04.916Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 31,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$s0AQyJ2caekEljAr4p3yhh$Vm9etiGycFKB1JRZNX6MCwqi53a0qcrt9iPtOt/C2lU=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "frida_o",
-        "first_name": "Frida",
-        "last_name": "Olsen",
-        "email": "frida.olsen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:05.194Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 32,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$HSZqboMO27tb0BJHCFocHr$vnRZXBtu6CTE/Q7hGGk/6W32rleC7A0lHXXovAdUIc8=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "bjorn_h",
-        "first_name": "Bjørn",
-        "last_name": "Haugen",
-        "email": "bjorn.haugen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:05.487Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 33,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$ix5gY71DoiRaL5VFYkvUrj$yhq2mNp45feu7ho80r6/ZVUT1L9YitEg0akNCXYBvZI=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "sigrid_d",
-        "first_name": "Sigrid",
-        "last_name": "Dahl",
-        "email": "sigrid.dahl@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:05.772Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 34,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$eJEnDcRQ9F8i6864AgbTPD$/kzln6/x83rKrcrC4v9cOObtGpY+gPVzYSr3ljdqDRo=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "olav_m",
-        "first_name": "Olav",
-        "last_name": "Moen",
-        "email": "olav.moen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:06.052Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 35,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$pMxUyWsrqEa97CfNk8DcO0$h3dW1amdakD0+EC2qVocrijdJjhYnYRq/xLx30T9JWM=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "ragnhild_s",
-        "first_name": "Ragnhild",
-        "last_name": "Strand",
-        "email": "ragnhild.strand@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:06.333Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 36,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$AqqG5VbcHvScQcJDsm7JxY$6Rli49AJnOFLlxcAyPEa1p31mwjdIPhhZmzjsTrBssM=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "knut_b",
-        "first_name": "Knut",
-        "last_name": "Bakke",
-        "email": "knut.bakke@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:06.605Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 37,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$R58lobhgTqzdZyqky4B28x$FYkWPyqqj5fEUZwdw+fkvZW7CdOfJMLOGEJsshatZgQ=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "marit_s",
-        "first_name": "Marit",
-        "last_name": "Sørensen",
-        "email": "marit.sorensen@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:06.896Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 38,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$XKDSkEAPiqAaOQEVSSIauA$t/6Eu7ve/Zt6aET2ELPHUZ4yPuXGd4MrVtduq/ocOKA=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "harald_l",
-        "first_name": "Harald",
-        "last_name": "Lund",
-        "email": "harald.lund@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:07.168Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 39,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$QGdWaszcZGAjpb95Ng0EXS$agYOFx7laOqGaDW9BuUXclNy7ixk7nVqJgbM9QumJm8=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "solveig_n",
-        "first_name": "Solveig",
-        "last_name": "Nygaard",
-        "email": "solveig.nygaard@email.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-10T09:03:07.441Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 40,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$TRukmpLbGJNj4E4pMUnzM3$Gz3paA1kbJWFddORBkaLcjy1K602K3ZS74STr8PuEyU=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "lzfhlfzl",
-        "first_name": "flznflz",
-        "last_name": "fznflzn",
-        "email": "fkznflzn@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-05-16T11:00:27.960Z",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-        "app_label": "admin",
-        "model": "logentry"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-        "app_label": "auth",
-        "model": "permission"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-        "app_label": "auth",
-        "model": "group"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-        "app_label": "auth",
-        "model": "user"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-        "app_label": "contenttypes",
-        "model": "contenttype"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-        "app_label": "sessions",
-        "model": "session"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-        "app_label": "helply",
-        "model": "category"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-        "app_label": "helply",
-        "model": "job"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": {
-        "app_label": "helply",
-        "model": "review"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": {
-        "app_label": "helply",
-        "model": "report"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": {
-        "app_label": "helply",
-        "model": "profile"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 12,
-    "fields": {
-        "app_label": "helply",
-        "model": "message"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 13,
-    "fields": {
-        "app_label": "helply",
-        "model": "jobapplication"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "0lwn71l3eytp4791aewi87u55qmsyytg",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQBe_iGlm2iX-U9JzB2s1ucADZUpxUiLvjSCmgfTPz3iLBtua0NV7STOIiBnH63RDGJ5cd0APKvcqxlnWZUe6KPGiTt0r8uh7u30GGlnvtA03sAg7Wa9TuHAJqFcFwIHYdWgJH2kS2ChyAtarbaopGEaLXQXy-3qU3sg:1wLjuc:rqWRKgUXvu3itWGLROQza3AGVQje6iEtVRanmokoEjk",
-        "expire_date": "2026-05-23T15:48:18.174Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "1t14cvo7t63ef9uz9l9p0hvueag1ps8b",
-    "fields": {
-        "session_data": ".eJxVjEsKAjEQRO-StYQhH01cuvcModPVmFFJYD6rwbs7gVnoqqDeq9pUonUpaZ1lSiPUVXl1-u0y8UtqB3hSfTTNrS7TmHVX9EFnfW-Q9-1w_w4KzWVfM7KN8HuELNZeECMkZAeyIgxPkRCMgQw5BuOZHRN3HWf2Lgzq8wU3TDnq:1wOCq6:55iEJRASbtAYb6h8zRlmLbn9FbUZC4TvczlaY-CuI5E",
-        "expire_date": "2026-05-30T11:05:50.480Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "hzohpivf1lnr4jhswg1ekz0dbnsaobmw",
-    "fields": {
-        "session_data": ".eJxVjMsOwiAQRf-FtSG8Cy7d-w1kBgapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKc2ZlJdvrdENKD2g7yHdqt89TbuszId4UfdPBrz_S8HO7fQYVRv7UTFr3wCFKgUkUHLzVkCwB2KgG1AEJSwRcpVZk0GlDkik_BGeMxE3t_AN9_OCg:1w566P:ivlTc_CqKQ7SHUFodRHpe_SSyTd2zGfOnMCeMIOSgh8",
-        "expire_date": "2026-04-07T18:03:41.490Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "ugdt5edl3zqk14xjm8mbw4r2i4ckadej",
-    "fields": {
-        "session_data": ".eJxVjMsOwiAUBf-FtSHlYQGX7v0Gch8gVQNJaVfGf7dNutDtzJzzFhHWpcS1pzlOLC7CidMvQ6BnqrvgB9R7k9TqMk8o90Qetstb4_S6Hu3fQYFetvVgQaMemdB6RUaBDwbADzjaDMpthFxAtoAmZ8VJs-dAxiSL5-Q9ic8X9Xo4tw:1wRpSX:oEe6Cvi78HCzHfqHqbmhrbxTWyDjS1PuiLGbB4FrpoU",
-        "expire_date": "2026-06-09T10:56:29.449Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "v7cazmnbp68dy5ef9k16rqsbhfpknpqi",
-    "fields": {
-        "session_data": ".eJxVjEsKAjEQRO-StYQhH01cuvcModPVmFFJYD6rwbs7gVnoqqDeq9pUonUpaZ1lSiPUVXl1-u0y8UtqB3hSfTTNrS7TmHVX9EFnfW-Q9-1w_w4KzWVfM7KN8HuELNZeECMkZAeyIgxPkRCMgQw5BuOZHRN3HWf2Lgzq8wU3TDnq:1wLkEw:QIG2X2f_uH1W0ibiY7a0t6LSKNIheAPeD7rHL22dZ6Y",
-        "expire_date": "2026-05-23T16:09:18.165Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "vo84blyyfj4rxlbvlxv5mf7awd3e7bjn",
-    "fields": {
-        "session_data": ".eJxVjM0OwiAQhN-FsyH8dCt49O4zkGVZpGogKe3J-O62SQ96nPm-mbcIuC4lrJ3nMCVxEVqcfruI9OS6g_TAem-SWl3mKcpdkQft8tYSv66H-3dQsJdtfVYGkKOLnMGkrLLCbJVxA1qXrAY9EHg_OqeMojRmA9qjB45AesskPl_gdjfK:1wCHkf:pv1n92KYpO7oT78rl8qpi6o_uGCWPEKU1dC9dl_V0J4",
-        "expire_date": "2026-04-27T13:54:57.683Z"
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 1,
-    "fields": {
-        "name": "Around the House",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 2,
-    "fields": {
-        "name": "Garden & Outdoor",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 3,
-    "fields": {
-        "name": "Errands & Transportation",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 4,
-    "fields": {
-        "name": "Tech & Digital Help",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 5,
-    "fields": {
-        "name": "Cleaning & Tidying",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 6,
-    "fields": {
-        "name": "Pet & Animal Care",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 7,
-    "fields": {
-        "name": "Home Repairs & Maintenance",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.category",
-    "pk": 8,
-    "fields": {
-        "name": "Administrative & Personal",
-        "icon": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 1,
-    "fields": {
-        "user": 2,
-        "role": "helper",
-        "bio": "",
-        "location": "",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 2,
-    "fields": {
-        "user": 4,
-        "role": "requester",
-        "bio": "",
-        "location": "",
-        "avatar": "avatars/images.jpeg"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 3,
-    "fields": {
-        "user": 5,
-        "role": "helper",
-        "bio": "",
-        "location": "",
-        "avatar": "avatars/happy-handsome-caucasian-man-casual-260nw-2378378987.jpg.webp"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 4,
-    "fields": {
-        "user": 1,
-        "role": "helper",
-        "bio": "",
-        "location": "Oslo",
-        "avatar": "avatars/image-2.jpg"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 5,
-    "fields": {
-        "user": 3,
-        "role": "requester",
-        "bio": "",
-        "location": "",
-        "avatar": "avatars/Burner_Account.jpg"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 6,
-    "fields": {
-        "user": 6,
-        "role": "requester",
-        "bio": "",
-        "location": "Oslo",
-        "avatar": "avatars/images-3.jpeg"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 7,
-    "fields": {
-        "user": 7,
-        "role": "helper",
-        "bio": "",
-        "location": "",
-        "avatar": "avatars/IMG_4956.jpeg"
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 24,
-    "fields": {
-        "user": 24,
-        "role": "helper",
-        "bio": "University student looking to help my community while earning extra income. Reliable and hardworking.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 25,
-    "fields": {
-        "user": 25,
-        "role": "helper",
-        "bio": "I enjoy helping others and have a lot of free time between classes. Happy to assist with errands, tech, or chores.",
-        "location": "Bærum",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 26,
-    "fields": {
-        "user": 26,
-        "role": "helper",
-        "bio": "Friendly and patient — especially good with seniors. Available most weekdays.",
-        "location": "Asker",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 27,
-    "fields": {
-        "user": 27,
-        "role": "helper",
-        "bio": "Recent high school grad with time to spare. I'm handy around the house and love animals.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 28,
-    "fields": {
-        "user": 28,
-        "role": "helper",
-        "bio": "I've helped elderly neighbors my whole life and want to make it official. Trustworthy and punctual.",
-        "location": "Lørenskog",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 29,
-    "fields": {
-        "user": 29,
-        "role": "helper",
-        "bio": "Part-time student, full-time helper! I drive and can assist with shopping, appointments, or odd jobs.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 30,
-    "fields": {
-        "user": 30,
-        "role": "helper",
-        "bio": "Experienced with garden work and basic home repairs. Happy to help with anything physical.",
-        "location": "Lillestrøm",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 31,
-    "fields": {
-        "user": 31,
-        "role": "helper",
-        "bio": "Tech-savvy and patient. Great at explaining things slowly — phones, tablets, computers, no problem.",
-        "location": "Sandvika",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 32,
-    "fields": {
-        "user": 32,
-        "role": "requester",
-        "bio": "Retired teacher. I live alone and sometimes need a helping hand with errands and technology.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 33,
-    "fields": {
-        "user": 33,
-        "role": "requester",
-        "bio": "78 years old, still active but could use help with heavier tasks around the house.",
-        "location": "Bærum",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 34,
-    "fields": {
-        "user": 34,
-        "role": "requester",
-        "bio": "I love my garden but my knees don't cooperate anymore. Looking for someone reliable and kind.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 35,
-    "fields": {
-        "user": 35,
-        "role": "requester",
-        "bio": "Widower, living independently. I need occasional help with grocery runs and appointments.",
-        "location": "Asker",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 36,
-    "fields": {
-        "user": 36,
-        "role": "requester",
-        "bio": "I'm fiercely independent but smart enough to ask for help when I need it!",
-        "location": "Lillestrøm",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 37,
-    "fields": {
-        "user": 37,
-        "role": "requester",
-        "bio": "Recently moved to a new apartment and need help getting settled and organized.",
-        "location": "Oslo",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 38,
-    "fields": {
-        "user": 38,
-        "role": "requester",
-        "bio": "Looking for someone patient to help me with my phone and computer. My grandchildren are too busy!",
-        "location": "Sandvika",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 39,
-    "fields": {
-        "user": 39,
-        "role": "requester",
-        "bio": "Retired engineer. I can manage most things but appreciate help with the heavy lifting.",
-        "location": "Lørenskog",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.profile",
-    "pk": 40,
-    "fields": {
-        "user": 40,
-        "role": "helper",
-        "bio": "",
-        "location": "",
-        "avatar": ""
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 2,
-    "fields": {
-        "created_at": "2026-05-09T14:42:57.477Z",
-        "requester": 3,
-        "helper": 1,
-        "category": 2,
-        "title": "Mowing the lawn",
-        "description": "I need help mowing my lawn, it is an area of 5000 sq meters, it should take around an hour",
-        "location": "Oslo",
-        "time_window": "9am to 3pm",
-        "budget": "150.00",
-        "budget_negotiable": true,
-        "status": "completed"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 4,
-    "fields": {
-        "created_at": "2026-05-09T15:51:27.787Z",
-        "requester": 4,
-        "helper": 7,
-        "category": 8,
-        "title": "help with expense report",
-        "description": "I need help to file my receipts into an excel sheet to file for an expense report this job should take a couple hours",
-        "location": "Lillestrom",
-        "time_window": "from Monday to Thursday",
-        "budget": "100.00",
-        "budget_negotiable": true,
-        "status": "accepted"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 5,
-    "fields": {
-        "created_at": "2026-05-09T16:56:41.525Z",
-        "requester": 4,
-        "helper": 7,
-        "category": 5,
-        "title": "house cleaning",
-        "description": "I need help to clean my house, it should take around an 1h30 to complete",
-        "location": "Nydalen",
-        "time_window": "as soon as possible",
-        "budget": "60.00",
-        "budget_negotiable": true,
-        "status": "completed"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 6,
-    "fields": {
-        "created_at": "2026-05-09T17:01:38.882Z",
-        "requester": 6,
-        "helper": null,
-        "category": 7,
-        "title": "Hanging up paintings",
-        "description": "I need help to hand up a few paintings around the house",
-        "location": "Oslo",
-        "time_window": "9am to 6pm any day",
-        "budget": "300.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 22,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.719Z",
-        "requester": 36,
-        "helper": null,
-        "category": 3,
-        "title": "Grocery run to IGA",
-        "description": "I need someone to pick up my weekly groceries at the IGA on Sherbrooke. I'll give you the list and money beforehand. Should take about an hour.",
-        "location": "",
-        "time_window": "Any weekday morning",
-        "budget": "25.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 23,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.720Z",
-        "requester": 33,
-        "helper": null,
-        "category": 4,
-        "title": "Help setting up my new iPad",
-        "description": "My daughter bought me a new iPad for my birthday and I have no idea how to set it up. Need someone patient to help me get started with email and video calls.",
-        "location": "",
-        "time_window": "Weekend afternoon",
-        "budget": "30.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 24,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.721Z",
-        "requester": 33,
-        "helper": null,
-        "category": 1,
-        "title": "Moving furniture in living room",
-        "description": "I'd like to rearrange my living room furniture but it's too heavy for me. Just a couch, two armchairs and a bookshelf. Shouldn't take more than an hour.",
-        "location": "",
-        "time_window": "Saturday or Sunday",
-        "budget": "35.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 25,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.722Z",
-        "requester": 34,
-        "helper": null,
-        "category": 5,
-        "title": "Spring cleaning help",
-        "description": "Looking for someone to help with a thorough spring cleaning — windows, baseboards, and getting into corners I can't reach anymore. About 3-4 hours of work.",
-        "location": "",
-        "time_window": "Flexible, any weekday",
-        "budget": "60.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 26,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.723Z",
-        "requester": 34,
-        "helper": null,
-        "category": 2,
-        "title": "Lawn mowing and hedge trimming",
-        "description": "My backyard lawn needs mowing and the hedges along the fence need a trim. I have all the equipment. About 2 hours of work.",
-        "location": "",
-        "time_window": "Weekend morning",
-        "budget": "45.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 27,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.723Z",
-        "requester": 35,
-        "helper": null,
-        "category": 3,
-        "title": "Drive to medical appointment",
-        "description": "I have a doctor's appointment downtown and no longer drive. Need a ride there and back, about 2 hours total including waiting time.",
-        "location": "",
-        "time_window": "Tuesday June 3rd, 10am",
-        "budget": "30.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 28,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.724Z",
-        "requester": 34,
-        "helper": null,
-        "category": 4,
-        "title": "Set up online banking on my computer",
-        "description": "My bank is pushing me to use online banking but I'm nervous about doing it alone. Need someone to sit with me, help set it up, and show me how it works safely.",
-        "location": "",
-        "time_window": "Any afternoon this week",
-        "budget": "40.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 29,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.725Z",
-        "requester": 38,
-        "helper": null,
-        "category": 7,
-        "title": "Hang 4 picture frames",
-        "description": "I have 4 framed photos I'd like to hang in the hallway. I have a hammer and nails but my hands shake too much to do it myself.",
-        "location": "",
-        "time_window": "Flexible",
-        "budget": "20.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 30,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.726Z",
-        "requester": 36,
-        "helper": null,
-        "category": 6,
-        "title": "Dog walking — twice daily for a week",
-        "description": "I'm recovering from a minor surgery and can't walk my golden retriever Biscuit for about a week. Twice a day, 20 minutes each walk in the neighbourhood.",
-        "location": "",
-        "time_window": "Starting this Monday, 1 week",
-        "budget": "80.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 31,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.726Z",
-        "requester": 33,
-        "helper": null,
-        "category": 8,
-        "title": "Help filling out government forms",
-        "description": "I received some forms from the government and I'm confused by the language. Need someone to sit with me and help fill them out correctly.",
-        "location": "",
-        "time_window": "Any weekday",
-        "budget": "35.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 32,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.727Z",
-        "requester": 34,
-        "helper": null,
-        "category": 2,
-        "title": "Plant flowers in front garden",
-        "description": "I bought a flat of petunias and marigolds from the nursery. Just need someone to help me plant them — I'll direct, you dig! About 1.5 hours.",
-        "location": "",
-        "time_window": "This weekend",
-        "budget": "30.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 33,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.728Z",
-        "requester": 33,
-        "helper": null,
-        "category": 5,
-        "title": "Help organizing my basement",
-        "description": "My basement has accumulated years of stuff. I need someone energetic to help me sort, box, and carry things to donate. Could be a 2-day project.",
-        "location": "",
-        "time_window": "Two weekday afternoons",
-        "budget": "90.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 34,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.728Z",
-        "requester": 35,
-        "helper": null,
-        "category": 1,
-        "title": "Change smoke detector batteries",
-        "description": "I have 6 smoke detectors and a carbon monoxide detector, all beeping. I can't safely climb a ladder anymore. Simple job for someone tall!",
-        "location": "",
-        "time_window": "As soon as possible",
-        "budget": "15.00",
-        "budget_negotiable": false,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 35,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.729Z",
-        "requester": 32,
-        "helper": null,
-        "category": 4,
-        "title": "Teach me how to use WhatsApp",
-        "description": "My family uses WhatsApp to share photos and do group calls but I can't figure it out. Need a patient teacher for about an hour.",
-        "location": "",
-        "time_window": "Any evening",
-        "budget": "25.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.job",
-    "pk": 36,
-    "fields": {
-        "created_at": "2026-05-10T09:03:07.730Z",
-        "requester": 35,
-        "helper": null,
-        "category": 3,
-        "title": "Pick up prescription from pharmacy",
-        "description": "My prescription is ready at the Jean Coutu on Notre-Dame but I'm not feeling well enough to go out. Need someone to pick it up and drop it off.",
-        "location": "",
-        "time_window": "Today or tomorrow",
-        "budget": "20.00",
-        "budget_negotiable": true,
-        "status": "open"
-    }
-},
-{
-    "model": "helply.message",
-    "pk": 1,
-    "fields": {
-        "job": 2,
-        "created_at": "2026-05-09T15:15:16.238Z",
-        "sender": 1,
-        "body": "hi mark"
-    }
-},
-{
-    "model": "helply.message",
-    "pk": 2,
-    "fields": {
-        "job": 2,
-        "created_at": "2026-05-09T15:20:02.149Z",
-        "sender": 1,
-        "body": "kfbkfbs"
-    }
-},
-{
-    "model": "helply.message",
-    "pk": 3,
-    "fields": {
-        "job": 2,
-        "created_at": "2026-05-09T16:31:28.800Z",
-        "sender": 3,
-        "body": "jerked"
-    }
-},
-{
-    "model": "helply.review",
-    "pk": 1,
-    "fields": {
-        "job": 2,
-        "created_at": "2026-05-09T16:32:59.816Z",
-        "reviewer": 3,
-        "reviewee": 1,
-        "rating": 4,
-        "comment": "great guy"
-    }
-},
-{
-    "model": "helply.review",
-    "pk": 2,
-    "fields": {
-        "job": 2,
-        "created_at": "2026-05-09T16:33:50.380Z",
-        "reviewer": 1,
-        "reviewee": 3,
-        "rating": 4,
-        "comment": "tip top"
-    }
-},
-{
-    "model": "helply.review",
-    "pk": 3,
-    "fields": {
-        "job": 5,
-        "created_at": "2026-05-09T17:47:54.332Z",
-        "reviewer": 4,
-        "reviewee": 7,
-        "rating": 5,
-        "comment": "great guy 👍"
-    }
-},
-{
-    "model": "helply.review",
-    "pk": 4,
-    "fields": {
-        "job": 5,
-        "created_at": "2026-05-09T17:48:51.746Z",
-        "reviewer": 7,
-        "reviewee": 4,
-        "rating": 1,
-        "comment": "the house was disgusting"
-    }
-},
-{
-    "model": "helply.jobapplication",
-    "pk": 1,
-    "fields": {
-        "job": 5,
-        "applicant": 7,
-        "message": "Hi I am a very hard worker \r\n",
-        "created_at": "2026-05-09T17:44:00.794Z"
-    }
-},
-{
-    "model": "helply.jobapplication",
-    "pk": 2,
-    "fields": {
-        "job": 4,
-        "applicant": 7,
-        "message": "",
-        "created_at": "2026-05-09T17:49:42.337Z"
-    }
-},
-{
-    "model": "helply.report",
-    "pk": 1,
-    "fields": {
-        "created_at": "2026-05-09T17:52:58.170Z",
-        "reporter": 7,
-        "reported_user": 4,
-        "reported_job": 5,
-        "reason": "did not pay me and was a really mean"
-    }
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$aI7xnQqSoeFxtlmEmxGItH$4nKZIsdmbHMFEc+KhAHalzQ5A9xz0gHBNdvjaaJcZ68=",
+    "last_login": "2026-05-09T16:56:52.660Z",
+    "is_superuser": true,
+    "username": "louie",
+    "first_name": "Louie",
+    "last_name": "Piakar",
+    "email": "louie.piakar@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-24T16:33:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$SRLkfdbyxiz0unq4xtPypo$PLPgmqJNgrxVJH+dvEi97cNvj7yPZ/k50l18QKrQtrg=",
+    "last_login": "2026-04-13T13:52:49.333Z",
+    "is_superuser": false,
+    "username": "soupy",
+    "first_name": "Patrik",
+    "last_name": "Hansen",
+    "email": "patrikhansen@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-13T13:52:49.025Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$53nSW0AXOOQCOUrcN0bYOM$a6AZwVWvwlVWQxNRty8H/TPjk80jfcPtdBeBp6axi+E=",
+    "last_login": "2026-05-09T16:41:43.015Z",
+    "is_superuser": false,
+    "username": "Marc82",
+    "first_name": "Marc",
+    "last_name": "Jensen",
+    "email": "marc.jensen@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-09T14:38:19Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ACxjbAmmlqeipAUcohfdBP$E9YmhWg9r0zvdqso8h/9WVpAG6jdZxnzIh73zn4/2Cg=",
+    "last_login": "2026-05-11T10:23:24.870Z",
+    "is_superuser": false,
+    "username": "John.adam",
+    "first_name": "John",
+    "last_name": "Adam",
+    "email": "john.adam@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-09T15:48:17Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$RU91mMcTerHBU9Cs9geUFP$52NoTlF4VGQ9Fh2tSuH7y5qT5PoiqYHSTj3POfLYyPM=",
+    "last_login": "2026-05-16T11:05:50.479Z",
+    "is_superuser": false,
+    "username": "carl.edlund",
+    "first_name": "Carl",
+    "last_name": "Edlund",
+    "email": "carl.edlund@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-09T16:09:17.967Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$UPWh2Nam5DWoUyegDTfQ6h$He5GtMUzN0gxF7qI8ulWfMwQjPQb7mDMUhGRYEHCcWE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jannette",
+    "first_name": "Jannette",
+    "last_name": "Smith",
+    "email": "jannette.smith@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-09T16:49:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$wkfLhRYkulzTlLjvsVy1jZ$IVdvpBFDDNMmE3oIy2vKiGg3IZ3p6MwQHvIgISBA8Vg=",
+    "last_login": "2026-05-26T10:56:29.448Z",
+    "is_superuser": true,
+    "username": "louieT",
+    "first_name": "",
+    "last_name": "",
+    "email": "louie.toulemonde@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-09T17:40:33.682Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$qAKaxHfHnQA0hu36f4HPQn$LJHxLM7QMVqTUaGe48M0wgS2RnijxxYpB4ZF2e7RlME=",
+    "last_login": "2026-05-26T11:36:08.189Z",
+    "is_superuser": false,
+    "username": "magnus_a",
+    "first_name": "Magnus",
+    "last_name": "Andersen",
+    "email": "magnus.andersen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:03.257Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$AuRpmn28YZKQAqILP3z6Wi$kCbY+l7c4lHCxVzyX9f8oIjFRHP6y1lLeLA64RgnmJQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ingrid_h",
+    "first_name": "Ingrid",
+    "last_name": "Hansen",
+    "email": "ingrid.hansen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:03.533Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$76eyOQpueKs7Ygyp86PXKE$+aIt8V3wfm/0SlvjEGJbJiZo4o4E7VQdLl9/uWqtxO0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "erik_j",
+    "first_name": "Erik",
+    "last_name": "Johansen",
+    "email": "erik.johansen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:03.811Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4tG4wpwaORFOfEeqNOdQ6V$Mm84ASei4vqoh92Gawp3CImU5NOaGzY64JhZQ8ppH/c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "astrid_l",
+    "first_name": "Astrid",
+    "last_name": "Larsen",
+    "email": "astrid.larsen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:04.086Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$fsQ1aXE2mi7Zp7xUvgONnW$b7LrAeyhIBpd66rCBRk/dTchg1mxJvY50ZOEB4UMZNI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jonas_b",
+    "first_name": "Jonas",
+    "last_name": "Berg",
+    "email": "jonas.berg@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:04.360Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Er3MLm3Jbve11vQcZFCPNx$DBG+6PJSuGzVofdzbYVM2HLxnctaQziYEF9KGZ8NEy0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "maja_k",
+    "first_name": "Maja",
+    "last_name": "Kristiansen",
+    "email": "maja.kristiansen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:04.637Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$8WlcLRRDOGVFQN11MjFXqz$Z0RBtgfYJOIIgcbUvA/djlAh3vbmoPEh2vyRUVuyRXw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tobias_h",
+    "first_name": "Tobias",
+    "last_name": "Holm",
+    "email": "tobias.holm@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:04.916Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$s0AQyJ2caekEljAr4p3yhh$Vm9etiGycFKB1JRZNX6MCwqi53a0qcrt9iPtOt/C2lU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "frida_o",
+    "first_name": "Frida",
+    "last_name": "Olsen",
+    "email": "frida.olsen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:05.194Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5s5EXZrjTgwPOPZqlF9cwS$N2tqxvwlWufZvsjC1XAr6o3VtPKzpBjdqqNu2ZwY4Gw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bjorn_h",
+    "first_name": "Bjørn",
+    "last_name": "Haugen",
+    "email": "bjorn.haugen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:05.487Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ix5gY71DoiRaL5VFYkvUrj$yhq2mNp45feu7ho80r6/ZVUT1L9YitEg0akNCXYBvZI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sigrid_d",
+    "first_name": "Sigrid",
+    "last_name": "Dahl",
+    "email": "sigrid.dahl@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:05.772Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 34,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$eJEnDcRQ9F8i6864AgbTPD$/kzln6/x83rKrcrC4v9cOObtGpY+gPVzYSr3ljdqDRo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "olav_m",
+    "first_name": "Olav",
+    "last_name": "Moen",
+    "email": "olav.moen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:06.052Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 35,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$OKNi99zadvvco8VskBCnQa$u36BDtqsOqeo3gy8wIBCu5oQ8PfCttSdcil2vfeFtVI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ragnhild_s",
+    "first_name": "Ragnhild",
+    "last_name": "Strand",
+    "email": "ragnhild.strand@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:06.333Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 36,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$AqqG5VbcHvScQcJDsm7JxY$6Rli49AJnOFLlxcAyPEa1p31mwjdIPhhZmzjsTrBssM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "knut_b",
+    "first_name": "Knut",
+    "last_name": "Bakke",
+    "email": "knut.bakke@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:06.605Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 37,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$R58lobhgTqzdZyqky4B28x$FYkWPyqqj5fEUZwdw+fkvZW7CdOfJMLOGEJsshatZgQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "marit_s",
+    "first_name": "Marit",
+    "last_name": "Sørensen",
+    "email": "marit.sorensen@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:06.896Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 38,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XKDSkEAPiqAaOQEVSSIauA$t/6Eu7ve/Zt6aET2ELPHUZ4yPuXGd4MrVtduq/ocOKA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "harald_l",
+    "first_name": "Harald",
+    "last_name": "Lund",
+    "email": "harald.lund@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:07.168Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 39,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$QGdWaszcZGAjpb95Ng0EXS$agYOFx7laOqGaDW9BuUXclNy7ixk7nVqJgbM9QumJm8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "solveig_n",
+    "first_name": "Solveig",
+    "last_name": "Nygaard",
+    "email": "solveig.nygaard@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-05-10T09:03:07.441Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 1,
+  "fields": {
+    "name": "Around the House",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 2,
+  "fields": {
+    "name": "Garden & Outdoor",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 3,
+  "fields": {
+    "name": "Errands & Transportation",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 4,
+  "fields": {
+    "name": "Tech & Digital Help",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 5,
+  "fields": {
+    "name": "Cleaning & Tidying",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 6,
+  "fields": {
+    "name": "Pet & Animal Care",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 7,
+  "fields": {
+    "name": "Home Repairs & Maintenance",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.category",
+  "pk": 8,
+  "fields": {
+    "name": "Administrative & Personal",
+    "icon": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "role": "helper",
+    "bio": "",
+    "location": "",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 2,
+  "fields": {
+    "user": 4,
+    "role": "requester",
+    "bio": "",
+    "location": "",
+    "avatar": "avatars/images.jpeg"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 3,
+  "fields": {
+    "user": 5,
+    "role": "helper",
+    "bio": "",
+    "location": "",
+    "avatar": "avatars/happy-handsome-caucasian-man-casual-260nw-2378378987.jpg.webp"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "role": "helper",
+    "bio": "",
+    "location": "Oslo",
+    "avatar": "avatars/image-2.jpg"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "role": "requester",
+    "bio": "",
+    "location": "",
+    "avatar": "avatars/Burner_Account.jpg"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "role": "requester",
+    "bio": "",
+    "location": "Oslo",
+    "avatar": "avatars/images-3.jpeg"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "role": "helper",
+    "bio": "",
+    "location": "",
+    "avatar": "avatars/IMG_4956.jpeg"
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 24,
+  "fields": {
+    "user": 24,
+    "role": "helper",
+    "bio": "University student looking to help my community while earning extra income. Reliable and hardworking.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 25,
+  "fields": {
+    "user": 25,
+    "role": "helper",
+    "bio": "I enjoy helping others and have a lot of free time between classes. Happy to assist with errands, tech, or chores.",
+    "location": "Bærum",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 26,
+  "fields": {
+    "user": 26,
+    "role": "helper",
+    "bio": "Friendly and patient — especially good with seniors. Available most weekdays.",
+    "location": "Asker",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 27,
+  "fields": {
+    "user": 27,
+    "role": "helper",
+    "bio": "Recent high school grad with time to spare. I'm handy around the house and love animals.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 28,
+  "fields": {
+    "user": 28,
+    "role": "helper",
+    "bio": "I've helped elderly neighbors my whole life and want to make it official. Trustworthy and punctual.",
+    "location": "Lørenskog",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 29,
+  "fields": {
+    "user": 29,
+    "role": "helper",
+    "bio": "Part-time student, full-time helper! I drive and can assist with shopping, appointments, or odd jobs.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 30,
+  "fields": {
+    "user": 30,
+    "role": "helper",
+    "bio": "Experienced with garden work and basic home repairs. Happy to help with anything physical.",
+    "location": "Lillestrøm",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 31,
+  "fields": {
+    "user": 31,
+    "role": "helper",
+    "bio": "Tech-savvy and patient. Great at explaining things slowly — phones, tablets, computers, no problem.",
+    "location": "Sandvika",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 32,
+  "fields": {
+    "user": 32,
+    "role": "requester",
+    "bio": "Retired teacher. I live alone and sometimes need a helping hand with errands and technology.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 33,
+  "fields": {
+    "user": 33,
+    "role": "requester",
+    "bio": "78 years old, still active but could use help with heavier tasks around the house.",
+    "location": "Bærum",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 34,
+  "fields": {
+    "user": 34,
+    "role": "requester",
+    "bio": "I love my garden but my knees don't cooperate anymore. Looking for someone reliable and kind.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 35,
+  "fields": {
+    "user": 35,
+    "role": "requester",
+    "bio": "Widower, living independently. I need occasional help with grocery runs and appointments.",
+    "location": "Asker",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 36,
+  "fields": {
+    "user": 36,
+    "role": "requester",
+    "bio": "I'm fiercely independent but smart enough to ask for help when I need it!",
+    "location": "Lillestrøm",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 37,
+  "fields": {
+    "user": 37,
+    "role": "requester",
+    "bio": "Recently moved to a new apartment and need help getting settled and organized.",
+    "location": "Oslo",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 38,
+  "fields": {
+    "user": 38,
+    "role": "requester",
+    "bio": "Looking for someone patient to help me with my phone and computer. My grandchildren are too busy!",
+    "location": "Sandvika",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.profile",
+  "pk": 39,
+  "fields": {
+    "user": 39,
+    "role": "requester",
+    "bio": "Retired engineer. I can manage most things but appreciate help with the heavy lifting.",
+    "location": "Lørenskog",
+    "avatar": ""
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-05-09T14:42:57.477Z",
+    "requester": 3,
+    "helper": 1,
+    "category": 2,
+    "title": "Mowing the lawn",
+    "description": "I need help mowing my lawn, it is an area of 5000 sq meters, it should take around an hour",
+    "location": "Oslo",
+    "time_window": "9am to 3pm",
+    "budget": "150.00",
+    "budget_negotiable": true,
+    "status": "completed"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-05-09T15:51:27.787Z",
+    "requester": 4,
+    "helper": 7,
+    "category": 8,
+    "title": "help with expense report",
+    "description": "I need help to file my receipts into an excel sheet to file for an expense report this job should take a couple hours",
+    "location": "Lillestrom",
+    "time_window": "from Monday to Thursday",
+    "budget": "100.00",
+    "budget_negotiable": true,
+    "status": "accepted"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-05-09T16:56:41.525Z",
+    "requester": 4,
+    "helper": 7,
+    "category": 5,
+    "title": "house cleaning",
+    "description": "I need help to clean my house, it should take around an 1h30 to complete",
+    "location": "Nydalen",
+    "time_window": "as soon as possible",
+    "budget": "60.00",
+    "budget_negotiable": true,
+    "status": "completed"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-05-09T17:01:38.882Z",
+    "requester": 6,
+    "helper": null,
+    "category": 7,
+    "title": "Hanging up paintings",
+    "description": "I need help to hand up a few paintings around the house",
+    "location": "Oslo",
+    "time_window": "9am to 6pm any day",
+    "budget": "300.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 22,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.719Z",
+    "requester": 36,
+    "helper": null,
+    "category": 3,
+    "title": "Grocery run to IGA",
+    "description": "I need someone to pick up my weekly groceries at the IGA on Sherbrooke. I'll give you the list and money beforehand. Should take about an hour.",
+    "location": "",
+    "time_window": "Any weekday morning",
+    "budget": "25.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 23,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.720Z",
+    "requester": 33,
+    "helper": null,
+    "category": 4,
+    "title": "Help setting up my new iPad",
+    "description": "My daughter bought me a new iPad for my birthday and I have no idea how to set it up. Need someone patient to help me get started with email and video calls.",
+    "location": "",
+    "time_window": "Weekend afternoon",
+    "budget": "30.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 24,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.721Z",
+    "requester": 33,
+    "helper": null,
+    "category": 1,
+    "title": "Moving furniture in living room",
+    "description": "I'd like to rearrange my living room furniture but it's too heavy for me. Just a couch, two armchairs and a bookshelf. Shouldn't take more than an hour.",
+    "location": "",
+    "time_window": "Saturday or Sunday",
+    "budget": "35.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 25,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.722Z",
+    "requester": 34,
+    "helper": null,
+    "category": 5,
+    "title": "Spring cleaning help",
+    "description": "Looking for someone to help with a thorough spring cleaning — windows, baseboards, and getting into corners I can't reach anymore. About 3-4 hours of work.",
+    "location": "",
+    "time_window": "Flexible, any weekday",
+    "budget": "60.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 26,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.723Z",
+    "requester": 34,
+    "helper": null,
+    "category": 2,
+    "title": "Lawn mowing and hedge trimming",
+    "description": "My backyard lawn needs mowing and the hedges along the fence need a trim. I have all the equipment. About 2 hours of work.",
+    "location": "",
+    "time_window": "Weekend morning",
+    "budget": "45.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 27,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.723Z",
+    "requester": 35,
+    "helper": null,
+    "category": 3,
+    "title": "Drive to medical appointment",
+    "description": "I have a doctor's appointment downtown and no longer drive. Need a ride there and back, about 2 hours total including waiting time.",
+    "location": "",
+    "time_window": "Tuesday June 3rd, 10am",
+    "budget": "30.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 28,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.724Z",
+    "requester": 34,
+    "helper": null,
+    "category": 4,
+    "title": "Set up online banking on my computer",
+    "description": "My bank is pushing me to use online banking but I'm nervous about doing it alone. Need someone to sit with me, help set it up, and show me how it works safely.",
+    "location": "",
+    "time_window": "Any afternoon this week",
+    "budget": "40.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 29,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.725Z",
+    "requester": 38,
+    "helper": null,
+    "category": 7,
+    "title": "Hang 4 picture frames",
+    "description": "I have 4 framed photos I'd like to hang in the hallway. I have a hammer and nails but my hands shake too much to do it myself.",
+    "location": "",
+    "time_window": "Flexible",
+    "budget": "20.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 30,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.726Z",
+    "requester": 36,
+    "helper": null,
+    "category": 6,
+    "title": "Dog walking — twice daily for a week",
+    "description": "I'm recovering from a minor surgery and can't walk my golden retriever Biscuit for about a week. Twice a day, 20 minutes each walk in the neighbourhood.",
+    "location": "",
+    "time_window": "Starting this Monday, 1 week",
+    "budget": "80.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 31,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.726Z",
+    "requester": 33,
+    "helper": null,
+    "category": 8,
+    "title": "Help filling out government forms",
+    "description": "I received some forms from the government and I'm confused by the language. Need someone to sit with me and help fill them out correctly.",
+    "location": "",
+    "time_window": "Any weekday",
+    "budget": "35.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 32,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.727Z",
+    "requester": 34,
+    "helper": null,
+    "category": 2,
+    "title": "Plant flowers in front garden",
+    "description": "I bought a flat of petunias and marigolds from the nursery. Just need someone to help me plant them — I'll direct, you dig! About 1.5 hours.",
+    "location": "",
+    "time_window": "This weekend",
+    "budget": "30.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 33,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.728Z",
+    "requester": 33,
+    "helper": null,
+    "category": 5,
+    "title": "Help organizing my basement",
+    "description": "My basement has accumulated years of stuff. I need someone energetic to help me sort, box, and carry things to donate. Could be a 2-day project.",
+    "location": "",
+    "time_window": "Two weekday afternoons",
+    "budget": "90.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 34,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.728Z",
+    "requester": 35,
+    "helper": null,
+    "category": 1,
+    "title": "Change smoke detector batteries",
+    "description": "I have 6 smoke detectors and a carbon monoxide detector, all beeping. I can't safely climb a ladder anymore. Simple job for someone tall!",
+    "location": "",
+    "time_window": "As soon as possible",
+    "budget": "15.00",
+    "budget_negotiable": false,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 35,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.729Z",
+    "requester": 32,
+    "helper": null,
+    "category": 4,
+    "title": "Teach me how to use WhatsApp",
+    "description": "My family uses WhatsApp to share photos and do group calls but I can't figure it out. Need a patient teacher for about an hour.",
+    "location": "",
+    "time_window": "Any evening",
+    "budget": "25.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.job",
+  "pk": 36,
+  "fields": {
+    "created_at": "2026-05-10T09:03:07.730Z",
+    "requester": 35,
+    "helper": null,
+    "category": 3,
+    "title": "Pick up prescription from pharmacy",
+    "description": "My prescription is ready at the Jean Coutu on Notre-Dame but I'm not feeling well enough to go out. Need someone to pick it up and drop it off.",
+    "location": "",
+    "time_window": "Today or tomorrow",
+    "budget": "20.00",
+    "budget_negotiable": true,
+    "status": "open"
+  }
+},
+{
+  "model": "helply.message",
+  "pk": 1,
+  "fields": {
+    "job": 2,
+    "created_at": "2026-05-09T15:15:16.238Z",
+    "sender": 1,
+    "body": "hi mark"
+  }
+},
+{
+  "model": "helply.message",
+  "pk": 2,
+  "fields": {
+    "job": 2,
+    "created_at": "2026-05-09T15:20:02.149Z",
+    "sender": 1,
+    "body": "kfbkfbs"
+  }
+},
+{
+  "model": "helply.message",
+  "pk": 3,
+  "fields": {
+    "job": 2,
+    "created_at": "2026-05-09T16:31:28.800Z",
+    "sender": 3,
+    "body": "jerked"
+  }
+},
+{
+  "model": "helply.review",
+  "pk": 1,
+  "fields": {
+    "job": 2,
+    "created_at": "2026-05-09T16:32:59.816Z",
+    "reviewer": 3,
+    "reviewee": 1,
+    "rating": 4,
+    "comment": "great guy"
+  }
+},
+{
+  "model": "helply.review",
+  "pk": 2,
+  "fields": {
+    "job": 2,
+    "created_at": "2026-05-09T16:33:50.380Z",
+    "reviewer": 1,
+    "reviewee": 3,
+    "rating": 4,
+    "comment": "tip top"
+  }
+},
+{
+  "model": "helply.review",
+  "pk": 3,
+  "fields": {
+    "job": 5,
+    "created_at": "2026-05-09T17:47:54.332Z",
+    "reviewer": 4,
+    "reviewee": 7,
+    "rating": 5,
+    "comment": "great guy 👍"
+  }
+},
+{
+  "model": "helply.review",
+  "pk": 4,
+  "fields": {
+    "job": 5,
+    "created_at": "2026-05-09T17:48:51.746Z",
+    "reviewer": 7,
+    "reviewee": 4,
+    "rating": 1,
+    "comment": "the house was disgusting"
+  }
+},
+{
+  "model": "helply.jobapplication",
+  "pk": 1,
+  "fields": {
+    "job": 5,
+    "applicant": 7,
+    "message": "Hi I am a very hard worker \r\n",
+    "created_at": "2026-05-09T17:44:00.794Z"
+  }
+},
+{
+  "model": "helply.jobapplication",
+  "pk": 2,
+  "fields": {
+    "job": 4,
+    "applicant": 7,
+    "message": "",
+    "created_at": "2026-05-09T17:49:42.337Z"
+  }
+},
+{
+  "model": "helply.report",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-05-09T17:52:58.170Z",
+    "reporter": 7,
+    "reported_user": 4,
+    "reported_job": 5,
+    "reason": "did not pay me and was a really mean"
+  }
 }
 ]

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, Category, Job, Message, Review, Report
+from .models import Profile, Category, Job, Message, Review, JobApplication, Report
 
 
 @admin.register(Profile)
@@ -27,6 +27,13 @@ class JobAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('job', 'sender', 'created_at')
     search_fields = ('sender__username', 'job__title')
+
+
+@admin.register(JobApplication)
+class JobApplicationAdmin(admin.ModelAdmin):
+    list_display = ('job', 'applicant', 'created_at')
+    list_filter = ('created_at',)
+    search_fields = ('job__title', 'applicant__username')
 
 
 @admin.register(Review)
