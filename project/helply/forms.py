@@ -26,9 +26,9 @@ class RegisterForm(UserCreationForm):
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
-            Profile.objects.create(
+            Profile.objects.update_or_create(
                 user=user,
-                role=self.cleaned_data['role']
+                defaults={'role': self.cleaned_data['role']}
             )
         return user
 
