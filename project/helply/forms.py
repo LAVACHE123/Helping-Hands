@@ -26,9 +26,12 @@ class RegisterForm(UserCreationForm):
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
-            Profile.objects.create(
+            # A Profile is auto-created by the post_save signal in apps.py,
+            # so update the role on the existing profile rather than
+            # creating a duplicate (which would violate the OneToOne constraint).
+            Profile.objects.update_or_create(
                 user=user,
-                role=self.cleaned_data['role']
+                defaults={'role': self.cleaned_data['role']},
             )
         return user
 
